@@ -11,7 +11,7 @@ The USA version is maintained by otavio.eth and can be found at l2ramps.com
     ```gh repo clone otavio939/l2ramps```
 
 => Install all dependencies
-    ```npm install```
+    ```npm install --no-optional```
 
 => Start modifying by running parcel's live server
     ```npx parcel src/index.html```
@@ -19,4 +19,4 @@ The USA version is maintained by otavio.eth and can be found at l2ramps.com
 => Build the production files
     ```npx parcel build src/index.html```
 
-=> Deploy the content on Dist folder
+=> Deploy the content of dist folder
