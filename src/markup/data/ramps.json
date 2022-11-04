@@ -1,0 +1,17 @@
+{
+    "cards": [
+
+       {
+          "id": "01",
+          "name": "Coinbase",
+          "description": "Best for current traders"
+       },
+
+       {
+          "id": "02",
+          "name": "Juno",
+          "description": "Best for overall low fees"
+       }
+
+    ]
+ }

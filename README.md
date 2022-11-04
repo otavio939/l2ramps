@@ -14,7 +14,7 @@ The USA version is maintained by otavio.eth and can be found at l2ramps.com
     ```npm install --no-optional```
 
 => Start modifying by running parcel's live server
-    ```npx parcel src/index.html```
+    ```npx parcel src/markup/index.hbs --no-cache```
 
 => Build the production files
     ```npx parcel build src/index.html```
