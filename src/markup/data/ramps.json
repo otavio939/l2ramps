@@ -2,15 +2,39 @@
     "cards": [
 
        {
-          "id": "01",
-          "name": "Coinbase",
-          "description": "Best for current traders"
+         "id": "01",
+         "name": "Coinbase",
+         "description": "Best for current traders",
+         "routes": [
+            {
+               "fiat": "Direct deposit",
+               "time": "5 business days",
+               "fee": "0.5%"
+            },
+            {
+               "fiat": "ACH transfers",
+               "time": "8 business days",
+               "fee": "0.25%"
+            }
+          ]
        },
 
        {
-          "id": "02",
-          "name": "Juno",
-          "description": "Best for overall low fees"
+         "id": "02",
+         "name": "Juno",
+         "description": "Best for overall low fees",
+         "routes": [
+            {
+               "fiat": "Direct deposit",
+               "time": "2 business days",
+               "fee": "0.1%"
+            },
+            {
+               "fiat": "Credit card",
+               "time": "Instant",
+               "fee": "3%"
+            }
+          ]
        }
 
     ]
