@@ -4,17 +4,28 @@
        {
          "id": "01",
          "name": "Coinbase",
-         "description": "Best for current traders",
+         "description": "Last update: 2022-11-06",
          "routes": [
             {
-               "fiat": "Direct deposit",
+               "type": "Funding",
+               "tokens": "US Dollar",
+               "method": "ACH transfer",
                "time": "5 business days",
-               "fee": "0.5%"
+               "fee": "Free"
             },
             {
-               "fiat": "ACH transfers",
-               "time": "8 business days",
-               "fee": "0.25%"
+               "type": "Purchase",
+               "tokens": "OP",
+               "method": "Market trade",
+               "time": "Instant",
+               "fee": "0.6% fee"
+            },
+            {
+               "type": "Transfer",
+               "tokens": "OP",
+               "method": "Optimism",
+               "time": "Instant",
+               "fee": "Network fee"
             }
           ]
        },
@@ -22,20 +33,72 @@
        {
          "id": "02",
          "name": "Juno",
-         "description": "Best for overall low fees",
+         "description": "Last update: 2022-11-06",
          "routes": [
             {
-               "fiat": "Direct deposit",
-               "time": "2 business days",
-               "fee": "0.1%"
+               "type": "Funding",
+               "tokens": "US Dollar",
+               "method": "Direct deposit",
+               "time": "1 business day",
+               "fee": "Free"
             },
             {
-               "fiat": "Credit card",
+               "type": "",
+               "tokens": "",
+               "method": "ACH transfer",
+               "time": "5 business day",
+               "fee": "Free"
+            },
+            {
+               "type": "Purchase",
+               "tokens": "ETH",
+               "method": "Market trade",
                "time": "Instant",
-               "fee": "3%"
+               "fee": "1%"
+            },
+            {
+               "type": "",
+               "tokens": "USDC",
+               "method": "Pegged conversion",
+               "time": "Instant",
+               "fee": "Free"
+            },
+            {
+               "type": "Transfer",
+               "tokens": "ETH - USDC",
+               "method": "Optimism - Arbitrum One",
+               "time": "Instant",
+               "fee": "Free"
+            }
+          ]
+       },
+       {
+         "id": "03",
+         "name": "OkCoin",
+         "description": "Last update: 2022-11-06",
+         "routes": [
+            {
+               "type": "Funding",
+               "tokens": "US Dollar",
+               "method": "ACH transfer",
+               "time": "5 business day",
+               "fee": "Free"
+            },
+            {
+               "type": "Purchase",
+               "tokens": "OP",
+               "method": "Market trade",
+               "time": "Instant",
+               "fee": "1%"
+            },
+            {
+               "type": "Transfer",
+               "tokens": "OP",
+               "method": "Optimism",
+               "time": "Instant",
+               "fee": "Network fee"
             }
           ]
        }
-
     ]
  }
