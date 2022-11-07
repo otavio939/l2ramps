@@ -1,46 +1,41 @@
----
-title: L2 Ramp
----
-
 <!doctype html>
 <html>
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{title}}</title>
+    <title>L2 Ramp</title>
     <link href="./index.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   </head>
 
-  <body class="min-h-screen min-w-full p-4 text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-800">
+  <body class="min-h-screen min-w-full p-4 text-center text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-800">
     
     <!-- Dark mode toggle button -->
     <div class="flex">
       <div class="flex-auto"></div>
-      <div class="flex-none p-2 text-slate-500 border border-slate-500 rounded-2xl">
-        <svg class="sun h-6 inline-block" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="16" d="M256 48v48M256 416v48M403.08 108.92l-33.94 33.94M142.86 369.14l-33.94 33.94M464 256h-48M96 256H48M403.08 403.08l-33.94-33.94M142.86 142.86l-33.94-33.94"/><circle cx="256" cy="256" r="80" fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="16"/></svg>
-        <svg class="moon h-4 inline-block " viewBox="0 0 512 512"><path d="M160 136c0-30.62 4.51-61.61 16-88C99.57 81.27 48 159.32 48 248c0 119.29 96.71 216 216 216 88.68 0 166.73-51.57 200-128-26.39 11.49-57.38 16-88 16-119.29 0-216-96.71-216-216z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>      
+      <div class="flex-none p-2 text-slate-500 border border-slate-500 rounded-full">
+        <i class="bx bxs-sun sun"></i>
+        <i class="bx bx-moon moon"></i>      
       </div>
     </div>
 
     <!-- Main header and subtitle -->
-    <div class="mt-4 text-center">
+    <div class="mt-4">
       <p class="text-5xl">L2 Ramps</p>
       <p class="text-xl">Decide the best fiat-to-crypto ramp for your Layer-2 journey</p>
     </div>
 
     <!-- Card layout -->
     {{#each ramps.cards}}
-      <div class="mt-8 p-2 max-w-4xl mx-auto border border-slate-500 rounded bg-slate-200 dark:bg-slate-700 shadow-lg ">
-        <p class="text-xs text-slate-400">{{description}}</p>
-        <p class="text-2xl mb-2">{{name}}</p>
+      <div class="grid grid-cols-5 auto-cols-auto my-8 p-4 gap-2 max-w-4xl mx-auto text-left border border-slate-500 rounded bg-slate-200 dark:bg-slate-700 shadow-lg ">
+        <p class="text-2xl font-bold">{{name}}</p>
+        <p class="col-span-4 text-right text-xs text-slate-400">{{description}}</p>
         {{#each this.routes}}
-          <div class="grid grid-cols-5 mb-1 ml-4">
-            <div>{{type}}</div>
-            <div>{{tokens}}</div>
-            <div>{{method}}</div>
-            <div>{{time}}</div>
-            <div>{{fee}}</div>
-          </div>
+          <div class="tooltip">{{type}}<span class="tooltiptext empty:hidden">{{type-tooltip}}</span></div>
+          <div class="tooltip">{{tokens}}<span class="tooltiptext empty:hidden">{{tokens-tooltip}}</span></div>
+          <div class="tooltip">{{method}}<span class="tooltiptext empty:hidden">{{method-tooltip}}</span></div>
+          <div class="tooltip">{{time}}<span class="tooltiptext empty:hidden">{{time-tooltip}}</span></div>
+          <div class="tooltip">{{fee}}<span class="tooltiptext empty:hidden">{{fee-tooltip}}</span></div>
         {{/each}}
       </div>
     {{/each}}
