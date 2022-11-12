@@ -31,11 +31,36 @@
         <p class="text-2xl font-bold">{{name}}</p>
         <p class="col-span-4 text-right text-xs text-slate-400">{{description}}</p>
         {{#each this.routes}}
-          <div class="tooltip">{{type}}<span class="tooltiptext empty:hidden">{{type-tooltip}}</span></div>
-          <div class="tooltip">{{tokens}}<span class="tooltiptext empty:hidden">{{tokens-tooltip}}</span></div>
-          <div class="tooltip">{{method}}<span class="tooltiptext empty:hidden">{{method-tooltip}}</span></div>
-          <div class="tooltip">{{time}}<span class="tooltiptext empty:hidden">{{time-tooltip}}</span></div>
-          <div class="tooltip">{{fee}}<span class="tooltiptext empty:hidden">{{fee-tooltip}}</span></div>
+          <div class="tooltip">{{type}}
+            <div class="wrapper inline-block">
+              <i class="bx bx-error-circle mx-2"></i>
+              <span class="tooltip empty:hidden text-xs">{{type-tooltip}}</span>
+            </div>
+          </div>
+          <div class="tooltip">{{tokens}}
+            <div class="wrapper inline-block">
+              <i class="bx bx-error-circle mx-2"></i>
+              <span class="tooltip empty:hidden text-xs">{{tokens-tooltip}}</span>
+            </div>
+          </div>
+          <div class="tooltip">{{method}}
+            <div class="wrapper inline-block">
+              <i class="bx bx-error-circle mx-2"></i>
+              <span class="tooltip empty:hidden text-xs">{{method-tooltip}}</span>
+            </div>
+          </div>
+          <div class="tooltip">{{time}}
+            <div class="wrapper inline-block">
+              <i class="bx bx-error-circle mx-2"></i>
+              <span class="tooltip empty:hidden text-xs">{{time-tooltip}}</span>
+            </div>
+          </div>
+          <div>{{fee}}
+            <div class="wrapper inline-block">
+              <i class="bx bx-error-circle mx-2"></i>
+              <span class="tooltip empty:hidden text-xs">{{fee-tooltip}}</span>
+            </div>
+          </div>
         {{/each}}
       </div>
     {{/each}}

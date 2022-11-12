@@ -11,7 +11,8 @@
                "tokens": "US Dollar",
                "method": "ACH transfer",
                "time": "5 business days",
-               "fee": "Free"
+               "fee": "Free",
+               "fee-tooltip": "For most of US banks"
             },
             {
                "type": "Purchase",
