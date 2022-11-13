@@ -1,0 +1,16 @@
+{
+    "versions": [
+
+        {
+            "id": "01",
+            "country": "Argentina",
+            "link": ""
+        },
+
+        {
+            "id": "02",
+            "country": "Brazil",
+            "link": ""
+        }
+    ]
+}
