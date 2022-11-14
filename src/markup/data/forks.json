@@ -2,15 +2,8 @@
     "versions": [
 
         {
-            "id": "01",
-            "country": "Argentina",
-            "link": ""
-        },
-
-        {
-            "id": "02",
-            "country": "Brazil",
-            "link": ""
+            "country": "Fork a version for your contry!",
+            "link": "https://github.com/otavio939/l2ramps"
         }
     ]
 }

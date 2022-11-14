@@ -1,53 +1,147 @@
 {
     "ramps": [
 
-       {
-         "cex": "Coinbase",
-         "route": "ACH Deposit -> Market Trade -> Withdraw to L2",
-         "tokens": "OP",
-         "layer2s": "Optimism",
-         "time": "5 days",
-         "fee": "0.6% + Gas fee",
-         "fee-note": "Taker fee using the Advance Trading interface",
-         "update": "2022-11-06"
-       },
+      {
+        "ramp": "Alchemy Pay",
+        "ramp-link": "https://alchemypay.org/"
+      },
 
-       {
-         "cex": "Juno",
-         "route": "ACH Deposit -> Pegged Conversion -> Withdraw to L2",
-         "tokens": "USDC",
-         "layer2s": "Optimism Arbitrum One",
-         "time": "5 days",
-         "fee": "Free",
-         "fee-note": "Promotional period",
-         "update": "2022-11-06"
-       },
+      {
+        "ramp": "Banxa",
+        "ramp-link": "https://banxa.com/"
+      },
 
-       {
-        "cex": "Juno",
+      {
+        "ramp": "Bybit",
+        "ramp-link": "https://www.bybit.com/en-US/"
+      },
+
+      {
+        "ramp": "Binance.US",
+        "ramp-link": "https://www.binance.us/",
+        "tokens": [
+          { "token": "ETH" }
+        ],
+        "layer2s": [
+          { "layer2": "Arbitrum" },
+          { "layer2": "Optimism" }
+        ]
+      },
+
+      {
+        "ramp": "Binance.US",
+        "ramp-link": "https://www.binance.us/",
+        "tokens": [
+          { "token": "OP" }
+        ],
+        "layer2s": [
+          { "layer2": "Optimism" }
+        ]
+      },
+
+      {
+        "ramp": "Bitkub",
+        "ramp-link": "https://www.bitkub.com/"
+      },
+
+      {
+        "ramp": "Coinbase",
+        "ramp-link": "https://coinbase.com/",
         "route": "ACH Deposit -> Market Trade -> Withdraw to L2",
-        "tokens": "USDC",
-        "layer2s": "Optimism Arbitrum One",
+        "tokens": [
+          { "token": "OP" }
+        ],
+        "layer2s": [
+          { "layer2": "Optimism" }
+        ],
+        "time": "5 days",
+        "fee": "0.6% + Gas fee",
+        "fee-note": "Taker fee using the Advance Trading interface",
+        "update": "2022-11-06"
+      },
+
+      {
+        "ramp": "Coinbase",
+        "ramp-link": "https://coinbase.com/",
+        "route": "Card purchase -> Withdraw to L2",
+        "tokens": [
+          { "token": "OP" }
+        ],
+        "layer2s": [
+          { "layer2": "Optimism" }
+        ]
+      },
+
+      {
+        "ramp": "Coinify",
+        "ramp-link": "https://www.coinify.com/"
+      },
+
+      {
+        "ramp": "CryptoRefills",
+        "ramp-link": "https://www.cryptorefills.com/"
+      },
+
+      {
+        "ramp": "Juno",
+        "ramp-link": "https://juno.finance/",
+        "route": "ACH Deposit -> Market Trade -> Withdraw to L2",
+        "tokens": [
+          { "token": "ETH" }
+        ],
+        "layer2s": [
+          { "layer2": "Arbitrum" },
+          { "layer2": "Optimism" }
+        ],
         "time": "5 days",
         "fee": "1%",
         "update": "2022-11-06"
       },
 
       {
-        "cex": "Juno",
+        "ramp": "Juno",
+        "ramp-link": "https://juno.finance/",
+        "route": "ACH Deposit -> Pegged Conversion -> Withdraw to L2",
+        "tokens": [
+          { "token": "USDC" }
+        ],
+        "layer2s": [
+          { "layer2": "Arbitrum" },
+          { "layer2": "Optimism" }
+        ],
+        "time": "5 days",
+        "fee": "Free",
+        "fee-note": "Promotional period",
+        "update": "2022-11-06"
+      },
+
+      {
+        "ramp": "Juno",
+        "ramp-link": "https://juno.finance/",
         "route": "Direct Deposit -> Market Trade -> Withdraw to L2",
-        "tokens": "ETH",
-        "layer2s": "Optimism Arbitrum One",
+        "tokens": [
+          { "token": "ETH" }
+        ],
+        "layer2s": [
+          { "layer2": "Arbitrum" },
+          { "layer2": "Optimism" }
+        ],
         "time": "1 day",
         "fee": "1%",
         "update": "2022-11-06"
       },
 
       {
-        "cex": "Juno",
+        "ramp": "Juno",
+        "ramp-link": "https://juno.finance/",
         "route": "Direct Deposit -> Pegged Conversion -> Withdraw to L2",
-        "tokens": "USDC",
-        "layer2s": "Optimism Arbitrum One",
+        "tokens": [
+          { "token": "USDC" }
+        ],
+        "layer2s": [
+          { "layer2": "Arbitrum" },
+          { "layer2": "Optimism" }
+        ],
         "time": "1 day",
         "fee": "Free",
         "fee-note": "Promotional period",
@@ -55,14 +149,150 @@
       },
 
       {
-        "cex": "OkCoin",
+        "ramp": "KuCoin",
+        "ramp-link": "https://www.kucoin.com/",
+        "tokens": [
+          { "token": "ETH" }
+        ],
+        "layer2s": [
+          { "layer2": "Arbitrum" },
+          { "layer2": "Optimism" }
+        ]
+      },
+
+      {
+        "ramp": "KuCoin",
+        "ramp-link": "https://www.kucoin.com/",
+        "tokens": [
+          { "token": "USDC" },
+          { "token": "USDT" }
+        ],
+        "layer2s": [
+          { "layer2": "Arbitrum" },
+          { "layer2": "Optimism" }
+        ]
+      },
+
+      {
+        "ramp": "KuCoin",
+        "ramp-link": "https://www.kucoin.com/",
+        "tokens": [
+          { "token": "OP" }
+        ],
+        "layer2s": [
+          { "layer2": "Optimism" }
+        ]
+      },
+
+      {
+        "ramp": "Mercuryo",
+        "ramp-link": "https://mercuryo.io/"
+      },
+
+      {
+        "ramp": "Moonpay",
+        "ramp-link": "https://www.moonpay.com/"
+      },
+
+      {
+        "ramp": "Mt Pelerin",
+        "ramp-link": "https://www.mtpelerin.com/"
+      },
+
+      {
+        "ramp": "OkCoin",
+        "ramp-link": "https://www.okcoin.com/",
         "route": "ACH Deposit -> Market Trade -> Withdraw to L2",
-        "tokens": "OP",
-        "layer2s":"Optimism",
+        "tokens": [
+          { "token": "OP" }
+        ],
+        "layer2s": [
+          { "layer2": "Optimism" }
+        ],
         "time": "5 days",
         "fee": "0.2% + Gas fee",
         "fee-note": "Taker fee at lowest tier",
         "update": "2022-11-06"
+      },
+
+      {
+        "ramp": "Ramp",
+        "ramp-link": "https://ramp.network/",
+        "route": "ApplePay or Card -> Withdraw to L2",
+        "tokens": [
+          { "token": "ETH" }
+        ],
+        "layer2s": [
+          { "layer2": "Arbitrum" },
+          { "layer2": "Optimism" },
+          { "layer2": "Starknet" },
+          { "layer2": "ZkSync" }
+        ],
+        "time": "Minutes",
+        "fee": "2.81% + Gas fee",
+        "update": "2022-11-13"
+      },
+
+      {
+        "ramp": "Ramp",
+        "ramp-link": "https://ramp.network/",
+        "route": "ApplePay or Card -> Withdraw to L2",
+        "tokens": [
+          { "token": "USDC" },
+          { "token": "USDT" }
+        ],
+        "layer2s": [
+          { "layer2": "ZkSync" }
+        ],
+        "time": "Minutes",
+        "fee": "2.81% + Gas fee",
+        "update": "2022-11-13"
+      },
+
+      {
+        "ramp": "Ramp",
+        "ramp-link": "https://ramp.network/",
+        "route": "ApplePay or Card -> Withdraw to L2",
+        "tokens": [
+          { "token": "DAI" }
+        ],
+        "layer2s": [
+          { "layer2": "Optimism" },
+          { "layer2": "ZkSync" }
+        ],
+        "time": "Minutes",
+        "fee": "2.81% + Gas fee",
+        "update": "2022-11-13"
+      },
+
+      {
+        "ramp": "Simplex",
+        "ramp-link": "https://www.simplex.com/"
+      },
+
+      {
+        "ramp": "Swype",
+        "ramp-link": "https://www.swype.com/"
+      },
+
+      {
+        "ramp": "Transak",
+        "ramp-link": "https://transak.com/"
+      },
+
+      {
+        "ramp": "UTORG",
+        "ramp-link": "https://utorg.pro/"
+      },
+
+      {
+        "ramp": "Wirex",
+        "ramp-link": "https://www.wirexapp.com/"
+      },
+
+      {
+        "ramp": "Wyre",
+        "ramp-link": "https://www.sendwyre.com/"
       }
 
     ]
