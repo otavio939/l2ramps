@@ -43,45 +43,27 @@ repo: "https://github.com/otavio939/l2ramps"
       <p class="text-xl">{{subtitle}}</p>
     </div>
 
-    <!-- Card layout -->
-    {{#each ramps.cards}}
-      <div class="grid grid-cols-5 auto-cols-auto my-8 p-4 gap-2 max-w-4xl mx-auto text-left border border-slate-500 rounded bg-slate-200 dark:bg-slate-700 shadow-lg ">
-        <p class="text-2xl font-bold">{{name}}</p>
-        <p class="col-span-4 text-right text-xs text-slate-400">{{description}}</p>
-        {{#each this.routes}}
-          <div class="tooltip">{{type}}
-            <div class="wrapper inline-block">
+    <!-- Table layout -->
+      <div class="grid grid-cols-9 items-center my-8 p-4 gap-x-2 gap-y-4 max-w-5xl mx-auto text-left border border-slate-500 rounded bg-slate-200 dark:bg-slate-700 shadow-lg">
+        <span class="font-bold">Ramp</span>
+        <span class="col-span-3 font-bold">Route</span>
+        <span class="font-bold">Tokens</span>
+        <span class="font-bold">Layer2s</span>
+        <span class="font-bold">Time</span>
+        <span class="col-span-2 font-bold">Fee</span>
+        {{#each main.ramps}}
+          <span class="">{{cex}}</span>
+          <span class="col-span-3 text-xs text-slate-400">{{route}}</span>
+          <span class="">{{tokens}}</span>
+          <span class="">{{layer2s}}</span>
+          <span class="" >{{time}}</span>
+          <span class="col-span-2">{{fee}}
+            <span class="wrapper inline-block">
               <i class="bx bx-error-circle mx-2"></i>
-              <span class="tooltip empty:hidden text-xs">{{type-tooltip}}</span>
-            </div>
-          </div>
-          <div class="tooltip">{{tokens}}
-            <div class="wrapper inline-block">
-              <i class="bx bx-error-circle mx-2"></i>
-              <span class="tooltip empty:hidden text-xs">{{tokens-tooltip}}</span>
-            </div>
-          </div>
-          <div class="tooltip">{{method}}
-            <div class="wrapper inline-block">
-              <i class="bx bx-error-circle mx-2"></i>
-              <span class="tooltip empty:hidden text-xs">{{method-tooltip}}</span>
-            </div>
-          </div>
-          <div class="tooltip">{{time}}
-            <div class="wrapper inline-block">
-              <i class="bx bx-error-circle mx-2"></i>
-              <span class="tooltip empty:hidden text-xs">{{time-tooltip}}</span>
-            </div>
-          </div>
-          <div>{{fee}}
-            <div class="wrapper inline-block">
-              <i class="bx bx-error-circle mx-2"></i>
-              <span class="tooltip empty:hidden text-xs">{{fee-tooltip}}</span>
-            </div>
-          </div>
+              <span class="tooltip empty:hidden text-xs">{{fee-note}}</span>
+            </span>
+          </span>
         {{/each}}
-      </div>
-    {{/each}}
 
     <script src="./dark-mode.js"></script>
   </body>

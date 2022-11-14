@@ -1,0 +1,69 @@
+{
+    "ramps": [
+
+       {
+         "cex": "Coinbase",
+         "route": "ACH Deposit -> Market Trade -> Withdraw to L2",
+         "tokens": "OP",
+         "layer2s": "Optimism",
+         "time": "5 days",
+         "fee": "0.6% + Gas fee",
+         "fee-note": "Taker fee using the Advance Trading interface",
+         "update": "2022-11-06"
+       },
+
+       {
+         "cex": "Juno",
+         "route": "ACH Deposit -> Pegged Conversion -> Withdraw to L2",
+         "tokens": "USDC",
+         "layer2s": "Optimism Arbitrum One",
+         "time": "5 days",
+         "fee": "Free",
+         "fee-note": "Promotional period",
+         "update": "2022-11-06"
+       },
+
+       {
+        "cex": "Juno",
+        "route": "ACH Deposit -> Market Trade -> Withdraw to L2",
+        "tokens": "USDC",
+        "layer2s": "Optimism Arbitrum One",
+        "time": "5 days",
+        "fee": "1%",
+        "update": "2022-11-06"
+      },
+
+      {
+        "cex": "Juno",
+        "route": "Direct Deposit -> Market Trade -> Withdraw to L2",
+        "tokens": "ETH",
+        "layer2s": "Optimism Arbitrum One",
+        "time": "1 day",
+        "fee": "1%",
+        "update": "2022-11-06"
+      },
+
+      {
+        "cex": "Juno",
+        "route": "Direct Deposit -> Pegged Conversion -> Withdraw to L2",
+        "tokens": "USDC",
+        "layer2s": "Optimism Arbitrum One",
+        "time": "1 day",
+        "fee": "Free",
+        "fee-note": "Promotional period",
+        "update": "2022-11-06"
+      },
+
+      {
+        "cex": "OkCoin",
+        "route": "ACH Deposit -> Market Trade -> Withdraw to L2",
+        "tokens": "OP",
+        "layer2s":"Optimism",
+        "time": "5 days",
+        "fee": "0.2% + Gas fee",
+        "fee-note": "Taker fee at lowest tier",
+        "update": "2022-11-06"
+      }
+
+    ]
+ }
