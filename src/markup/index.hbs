@@ -4,7 +4,7 @@ title: "L2 Ramps"
 subtitle: "Decide the best fiat-to-crypto ramp for your Layer-2 journey"
 repo: "https://github.com/otavio939/l2ramps"
 ---
-{{!-- Edit data above if forking --}}
+{{!-- To edit data above if forking --}}
 
 
 <!doctype html>
@@ -13,72 +13,82 @@ repo: "https://github.com/otavio939/l2ramps"
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{title}}</title>
-    <link href="./index.css" rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg">
+    <link rel="icon" type="image/png" href="../favicon/favicon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Monoton&family=Rubik:wght@400;700&display=swap">
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
   </head>
 
-  <body class="min-h-screen min-w-full p-4 text-center text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-800">
+  <body class="min-h-screen min-w-full text-center font-body">
     
     <!-- Webpage header -->
-    <div class="flex text-sm text-slate-500">
-      {{!-- Top left dropdown menu --}}
-      <div class="dropdown flex-none p-2 text-left border border-slate-500 rounded-full">
-        <span>{{country}}<i class='bx bxs-chevron-down pl-1'></i></span>
-        <div class="dropdown-content">
-          {{#each forks.versions}}
-            <p class="w-max mt-1 p-2 border border-slate-500 rounded-full ">
-              <a href="{{link}}" class="hover:underline ">{{country}}</a>
-            </p>
-          {{/each}}
+    <div class="text-pure-white bg-evergreen-fog dark:bg-fabulous-grape">
+      {{!-- Top row --}}
+      <div class="flex pt-4 mx-4 text-pure-white">
+        {{!-- Left dropdown menu --}}
+        <div class="dropdown flex-none px-2 py-1 text-left border border-pure-white">
+          <span class="align-middle">{{country}}<i class='bx bxs-chevron-down cursor-pointer align-middle pl-1'></i></span>
+          <div class="dropdown-content">
+            {{#each forks.versions}}
+              <p class="w-max mt-1 p-2 border border-pure-white ">
+                <a href="{{link}}" class="hover:opacity-70">{{country}}</a>
+              </p>
+            {{/each}}
+          </div>
+        </div>
+        <!-- Right icons: dark mode toggle and github button -->
+        <div class="flex-auto"></div>
+        <div class="flex-none p-2 border border-pure-white">
+          <i class="bx bxs-sun sun cursor-pointer"></i>
+          <i class="bx bx-moon moon cursor-pointer"></i>      
+        </div>
+        <div class="flex-none ml-3 p-2 border border-accent">
+          <a href="{{repo}}" target="_blank"><i class='bx bxl-github'></i></a>
         </div>
       </div>
-      <!-- Top right icons: dark mode toggle and github button -->
-      <div class="flex-auto"></div>
-      <div class="flex-none p-2 border border-slate-500 rounded-full">
-        <i class="bx bxs-sun sun"></i>
-        <i class="bx bx-moon moon"></i>      
+      <!-- Main header and subtitle -->
+      <div class="mt-16 pb-24">
+        <p class="text-6xl font-header mb-4">{{title}}</p>
+        <p class="text-xl">{{subtitle}}</p>
       </div>
-      <div class="flex-none ml-3 p-2 border border-slate-500 rounded-full">
-        <a href="{{repo}}" target="_blank"><i class='bx bxl-github'></i></a>
-      </div>
-    </div>
-
-    <!-- Main header and subtitle -->
-    <div class="mt-4">
-      <p class="text-5xl">{{title}}</p>
-      <p class="text-xl">{{subtitle}}</p>
     </div>
 
     <!-- Table layout -->
-      <div class="grid grid-cols-8 items-center my-8 p-4 gap-x-2 gap-y-4 max-w-screen-xl mx-auto text-center border border-slate-500 rounded bg-slate-200 dark:bg-slate-700 shadow-lg">
+    <div class="w-screen bg-skyline-steel dark:bg-mineral-gray dark:text-pure-white">
+      <div class="grid grid-cols-8 items-center py-32 gap-x-2 gap-y-4 max-w-screen-xl mx-auto text-center">
         {{!-- Table header --}}
-        <span class="text-left font-bold">Ramp</span>
-        <span class="col-span-3 text-left font-bold">Route</span>
+        <span class="font-bold text-left">Ramp</span>
+        <span class="font-bold col-span-3 text-left">Route</span>
         <span class="font-bold">Tokens</span>
         <span class="font-bold">Layer2s</span>
         <span class="font-bold">Time</span>
-        <span class="text-right font-bold">Fee</span>
+        <span class="font-bold text-right">Fee</span>
         {{!-- Table rows loop --}}
         {{#each main.ramps}}
-          <div class="col-span-8 border-t border-t-slate-500"></div>
+          <div class="col-span-8 border-t border-homburg-gray dark:border-skyline-steel"></div>
           {{!-- Ramp column --}}
-          <a href="{{ramp-link}}" target="_blank" class="text-left hover:underline">{{ramp}}</a>
+          <a href="{{ramp-link}}" target="_blank" class="font-bold text-left hover:opacity-50">
+            <img src="../icons/{{ramp}}.png" alt="{{ramp}}" class="inline-block w-4 max-h-4 mr-3">{{ramp}}</a>
           {{!-- Route column --}}
-          <span class="col-span-3 text-left text-xs text-slate-400">{{route}}</span>
+          <span class="col-span-3 text-left">{{route}}</span>
           {{!-- Token column --}}
-          <span class="">{{#each this.tokens}}<span class="mr-1 text-sm">{{token}}</span>{{/each}}</span>
+          <span class="">{{#each this.tokens}}<span class="mr-1">{{token}}</span>{{/each}}</span>
           {{!-- Layer2 column --}}
           <span>{{#each this.layer2s}}<img src="../icons/{{layer2}}.png" alt="{{layer2}}" class="inline-block h-6 mx-1">{{/each}}</span>
           {{!-- Time column --}}
-          <span class="text-sm" >{{time}}</span>
+          <span class="" >{{time}}</span>
           {{!-- Fee column --}}
-          <span class="text-sm text-right">{{fee}}
+          <span class="text-right">{{fee}}
             <span class="wrapper inline-block">
               <i class="bx bx-help-circle ml-1"></i>
               <span class="tooltip empty:hidden text-xs">{{fee-note}}</span>
             </span>
           </span>
         {{/each}}
+        <div class="col-span-8 border-t border-homburg-gray dark:border-skyline-steel"></div>
+      </div>
+    </div>
 
     <script src="./dark-mode.js"></script>
   </body>

@@ -6,14 +6,11 @@
 /*  */
 /* DROPDOWN */
 /*  */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
 .dropdown-content {
   display: none;
   position: absolute;
-  padding: 12px 0px;
+  margin-left: -8px;
+  padding: 20px 0px;
   z-index: 1;
 }
 .dropdown:hover .dropdown-content {

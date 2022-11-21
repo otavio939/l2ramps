@@ -1,4 +1,6 @@
 .DS_Store
+.firebaserc
 .parcel-cache
+firebase.json
 /dist
 /node_modules
