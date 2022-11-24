@@ -115,5 +115,8 @@
 }
 
 .active {
-  background-color: #6D344F;
+  background-color: #A09287;
+}
+.active-dark {
+    background-color: #6D344F;
 }

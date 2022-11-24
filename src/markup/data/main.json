@@ -27,7 +27,13 @@
           "fee": "1.99%"
         }
       ],
-      "tokens": [
+      "purchase": [
+        {
+          "method":"Online widget",
+          "fee":"No fee"
+        }
+      ],
+      "withdraw": [
         {
           "token":"ETH",
           "layer2s": [
@@ -80,7 +86,7 @@
           "fee":"3.75%"    
         }
       ],
-      "tokens": [
+      "withdraw": [
         {
           "token":"ETH",
           "layer2s": [
@@ -120,7 +126,7 @@
           "fee-note":"Taker fee using the Advance Trading interface"
         }
       ],
-      "tokens": [
+      "withdraw": [
         {
           "token":"OP",
           "layer2s":[
@@ -149,7 +155,7 @@
           "fee":"Gas fee"
         }
       ],
-      "tokens":[
+      "withdraw":[
         {
           "token":"DAI",
           "layer2s": [
@@ -196,7 +202,7 @@
           "fee":"Free"
         }
       ],
-      "tokens": [
+      "withdraw": [
         {
           "token":"ETH",
           "layer2s": [
@@ -217,7 +223,7 @@
     {
       "ramp":"KuCoin",
       "ramp-link":"https://www.kucoin.com/",
-      "tokens": [
+      "withdraw": [
         {
           "token":"ETH",
           "layer2s": [
@@ -250,7 +256,7 @@
           "method":"ACH"
         }
       ],
-      "tokens": [
+      "withdraw": [
         {
           "token":"USDC"
         }
@@ -284,7 +290,7 @@
           "fee-note":"Taker fee at lowest tier"
         }
       ],
-      "tokens": [
+      "withdraw": [
         {
           "token":"OP",
           "layer2s": [
@@ -310,7 +316,7 @@
           "fee":"2.81%"
         }
       ],
-      "tokens": [
+      "withdraw": [
         {
           "token":"ETH",
           "layer2s": [
