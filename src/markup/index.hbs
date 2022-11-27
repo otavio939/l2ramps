@@ -1,18 +1,10 @@
----
-country: "United States"
-title: "L2 Ramps"
-subtitle: "Decide the best fiat-to-crypto ramp for your Layer-2 journey"
-repo: "https://github.com/otavio939/l2ramps"
----
-{{!-- To edit data above if forking --}}
-
-
 <!doctype html>
 <html>
+
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{title}}</title>
+    <title></title>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg">
     <link rel="icon" type="image/png" href="../favicon/favicon.png">
@@ -23,39 +15,42 @@ repo: "https://github.com/otavio939/l2ramps"
   <body class="min-h-screen min-w-full font-body text-center">
     
     <!-- HEADER -->
-    <div class="bg-chatura-gray dark:bg-fabulous-grape text-pure-white border-pure-white">
+    {{#with header}}
+      <div class="bg-chatura-gray dark:bg-fabulous-grape text-pure-white border-pure-white">
 
-      {{!-- Top row --}}
-      <div class="flex pt-4 mx-4">
-        {{!-- Left dropdown menu --}}
-        <div class="dropdown flex-none px-2 py-1 text-left border">
-          <span class="align-middle">{{country}}<i class='bx bxs-chevron-down cursor-pointer align-middle pl-1'></i></span>
-          <div class="dropdown-content">
-            {{#each forks.versions}}
-              <p class="w-max mt-1 p-2 border">
-                <a href="{{link}}" class="hover:opacity-70">{{country}}</a>
-              </p>
-            {{/each}}
+        {{!-- Top row --}}
+        <div class="flex pt-4 mx-4">
+          {{!-- Left dropdown menu --}}
+          <div class="dropdown flex-none px-2 py-1 text-left border">
+            <span class="align-middle">{{version}}<i class='bx bxs-chevron-down cursor-pointer align-middle pl-1'></i></span>
+            <div class="dropdown-content">
+              {{#each this.forks}}
+                <p class="w-max mt-1 p-2 border">
+                  <a href="{{link}}" class="hover:opacity-70">{{country}}</a>
+                </p>
+              {{/each}}
+            </div>
+          </div>
+
+          <!-- Right icons: dark mode toggle and github button -->
+          <div class="flex-auto"></div>
+          <div class="flex-none p-2 border">
+            <i class="bx bxs-sun sun cursor-pointer"></i>
+            <i class="bx bx-moon moon cursor-pointer"></i>      
+          </div>
+          <div class="flex-none ml-3 p-2 border border-accent">
+            <a href="{{repo}}" target="_blank"><i class='bx bxl-github'></i></a>
           </div>
         </div>
-        <!-- Right icons: dark mode toggle and github button -->
-        <div class="flex-auto"></div>
-        <div class="flex-none p-2 border">
-          <i class="bx bxs-sun sun cursor-pointer"></i>
-          <i class="bx bx-moon moon cursor-pointer"></i>      
-        </div>
-        <div class="flex-none ml-3 p-2 border border-accent">
-          <a href="{{repo}}" target="_blank"><i class='bx bxl-github'></i></a>
-        </div>
-      </div>
 
-      <!-- Title and subtitle -->
-      <div class="mt-16 pb-24">
-        <p class="text-6xl font-header mb-4">{{title}}</p>
-        <p class="text-xl">{{subtitle}}</p>
-      </div>
+        <!-- Title and subtitle -->
+        <div class="mt-16 pb-24">
+          <p class="text-6xl font-header mb-4">{{title}}</p>
+          <p class="text-xl">{{subtitle}}</p>
+        </div>
 
-    </div>
+      </div>
+    {{/with}}
 
     <!-- ACCORDION -->
     <div class="w-screen mx-auto py-24 text-left bg-pure-white text-black-magic dark:bg-mineral-gray dark:text-pure-white">
@@ -135,5 +130,6 @@ repo: "https://github.com/otavio939/l2ramps"
     </div>
 
     <script src="./app.js"></script>
+
   </body>
 </html>
