@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>L2 Ramps</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg">
     <link rel="icon" type="image/png" href="../favicon/favicon.png">
@@ -54,21 +54,40 @@
 
     <!-- ACCORDION -->
     <div class="w-screen mx-auto py-24 text-left bg-pure-white text-black-magic dark:bg-mineral-gray dark:text-pure-white">
+
+      {{!-- Header over accordion --}}
+      <div class="flex max-w-screen-lg mx-auto mb-2 font-bold opacity-70 text-sm text-center">
+        <div class="basis-4/12"></div>
+        <div class="basis-2/12">Ramp Way</div>
+        <div class="basis-2/12">KYC</div>
+        <div class="basis-2/12">Fast-ramp</div>
+        <div class="basis-2/12">Low Cost</div>
+      </div>
         
       {{!-- Accordion rows loop --}}
       {{#each main.ramps}}
         
         {{!-- Accordion headers --}}
-        <div class="accordion max-w-screen-md mx-auto px-4 py-6 cursor-pointer border-t border-chatura-gray dark:border-kestrel-white hover:bg-chatura-gray dark:hover:bg-fabulous-grape">
-          <img src="../icons/{{ramp}}.png" alt="{{ramp}}" class="inline-block w-4 max-h-4 mr-3">
-          <span class="font-bold">{{ramp}}</span>
+        <div class="accordion max-w-screen-lg mx-auto px-4 py-6 cursor-pointer border-t border-chatura-gray dark:border-kestrel-white hover:bg-chatura-gray dark:hover:bg-fabulous-grape">
+          <div class="flex">
+            <div class="basis-6/12">
+              <img class="inline-block w-4 max-h-4 mr-3" src="../icons/{{ramp}}.png" alt="{{ramp}}">
+              <span class="font-bold">{{ramp}}</span>
+              <span class="ml-2 italic text-sm opacity-50">{{type}}</span>
+            </div>
+            <div class="basis-6/12 text-center">
+              <span class="">{{way}}</span>
+            </div>
+          </div>
         </div>
 
         {{!-- Accordion content --}}
-        <div class="panel max-w-screen-md mx-auto p-4 bg-kestrel-white dark:bg-mount-etna">
-          <a href="{{ramp-link}}" target="_blank" class="p-1 text-sm text-reddened-earth dark:text-kestrel-white border border-reddened-earth dark:border-kestrel-white hover:opacity-70">
-            Website<i class='bx bx-link-external ml-1'></i>
-          </a>
+        <div class="panel max-w-screen-lg mx-auto p-4 bg-kestrel-white dark:bg-mount-etna">
+
+          {{!-- Links --}}
+          {{#each this.links}}
+            <a href="{{url}}" target="_blank" class="p-1 ml-2 text-sm text-reddened-earth dark:text-kestrel-white border border-reddened-earth dark:border-kestrel-white hover:opacity-70">{{text}}<i class='bx bx-link-external ml-1'></i></a>
+          {{/each}}
 
           {{!-- Funding sub-section --}}
           <div class="my-6">
@@ -92,7 +111,7 @@
           {{!-- Purchase sub-section --}}
           <div class="my-6">
             <div class="fle">
-              <span class="basis-12/12 font-bold mb-1">Purchase</span>
+              <span class="basis-12/12 font-bold mb-1">Token Purchase</span>
             </div>
             {{#each this.purchase}}
               <div class="flex pt-1 pl-6">
@@ -113,9 +132,9 @@
               <span class="basis-12/12 font-bold mb-1">Withdraw</span>
             </div>
             {{#each this.withdraw}}
-              <div class="flex pt-1 pl-6">
-                <span class="basis-3/12">{{token}}</span>
-                <span class="basis-3/12">
+              <div class="flex pt-1 pl-6 items-center">
+                <span class="basis-1/12 text-sm align-middle">{{token}}</span>
+                <span class="basis-2/12 align-middle">
                   {{#each this.layer2s}}
                     <img src="../icons/{{layer2}}.png" alt="{{layer2}}" class="inline-block h-5 mr-1">
                   {{/each}}
