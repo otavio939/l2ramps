@@ -3,26 +3,50 @@
 
     {
       "ramp":"Alchemy Pay",
-      "type":"Infra | Ramp",
+      "type":"Infra | Web Ramp",
       "way":"ON",
+      "kyc":"Email, Card info",
+      "fast-ramp":"Yes",
+      "low-cost":"No",
       "links":[
         {"text":"Web Ramp", "url":"https://ramp.alchemypay.org/"},
         {"text":"Website", "url":"https://alchemypay.org/"},
         {"text":"Terms of Use", "url":"https://alchemypay.org/terms-of-use/"},
         {"text":"Privacy Policy", "url":"https://alchemypay.org/privacy-policy/"}
       ],
+      "funding":[
+        {
+          "method":"Credit/Debit Card",
+          "time":"Minutes",
+          "fee":"4%",
+          "fee-note":"Benchmarked for purchase of USDC with 1000USD on 11/27/22"
+        },
+        {
+          "method":"Binance Pay",
+          "time":"Minutes",
+          "fee":"0.81%",
+          "fee-note":"Benchmarked for purchase of USDC with 1000USD on 11/27/22"
+        }
+      ],
+      "purchase":[
+        {
+          "method":"Market buy on web app"
+        }
+      ],
       "withdraw":[
         {
           "token":"ETH",
           "layer2s":[
             {"layer2":"Arbitrum"}
-          ]
+          ],
+          "fee":"Network fee"
         },
         {
           "token":"USDC",
           "layer2s":[
             {"layer2":"Arbitrum"}
-          ]
+          ],
+          "fee":"Network fee"
         },
         {
           "token":"USDT",
@@ -35,7 +59,7 @@
 
     {
       "ramp":"Banxa",
-      "type":"Infra | Ramp",
+      "type":"Infra | Web Ramp",
       "way":"ON",
       "links":[
         {"text":"Website", "url":"https://banxa.com/"}
@@ -60,7 +84,7 @@
       ],
       "purchase":[
         {
-          "method":"Online widget",
+          "method":"Market buy on web app",
           "fee":"No fee"
         }
       ],
@@ -88,6 +112,8 @@
 
     {
       "ramp":"Bybit",
+      "type": "CEX",
+      "way":"ON",
       "links":[
         {"text":"Website", "url":"https://www.bybit.com/en-US/"}
       ]
@@ -95,6 +121,7 @@
 
     {
       "ramp":"Binance.US",
+      "type":"CEX",
       "way":"ON/OFF",
       "links":[
         {"text":"Website", "url":"https://www.binance.us/"}
@@ -122,6 +149,11 @@
           "fee":"3.75%"    
         }
       ],
+      "purchase":[
+        {
+          "method":"Trading on plataform"
+        }
+      ],
       "withdraw":[
         {
           "token":"ETH",
@@ -141,6 +173,8 @@
 
     {
       "ramp":"Bitkub",
+      "type":"CEX",
+      "way":"ON",
       "links":[
         {"text":"Website", "url":"https://www.bitkub.com/"}
       ]
@@ -148,6 +182,8 @@
 
     {
       "ramp":"Coinbase",
+      "type":"CEX | Wallet",
+      "way":"ON/OFF",
       "links":[
         {"text":"Website", "url":"https://coinbase.com/"}
       ],
@@ -182,13 +218,26 @@
 
     {
       "ramp":"Coinify",
+      "type":"Infra | Web Ramp",
+      "way":"ON",
       "links":[
-        {"text":"Website", "url":"https://www.coinify.com/"}
+        {"text":"Website", "url":"https://www.coinify.com/"},
+        {"text":"Web Ramp", "url":"https://mycoinify.com/trade/"}
+      ]
+    },
+
+    {
+      "ramp":"Crypto.com",
+      "type":"CEX",
+      "links":[
+        {"text":"Website", "url":"https://crypto.com/us/"}
       ]
     },
 
     {
       "ramp":"CryptoRefills",
+      "type":"E-Commerce",
+      "way":"OFF",
       "links":[
         {"text":"Website", "url":"https://www.cryptorefills.com/"}
       ],
@@ -231,7 +280,17 @@
     },
 
     {
+      "ramp":"Fluid Finance",
+      "type":"FinTech",
+      "links":[
+        {"text":"Website", "url":"https://fluid.ch/"}
+      ]
+    },
+
+    {
       "ramp":"Juno",
+      "type":"FinTech",
+      "way":"ON/OFF",
       "links":[
         {"text":"Website", "url":"https://juno.finance/"}
       ],
@@ -268,6 +327,8 @@
 
     {
       "ramp":"KuCoin",
+      "type":"CEX",
+      "way":"ON",
       "links":[
         {"text":"Website", "url":"https://www.kucoin.com/"}
       ],
@@ -298,6 +359,8 @@
 
     {
       "ramp":"Layerswap",
+      "type":"Ramp",
+      "way":"ON/OFF",
       "links":[
         {"text":"Website", "url":"https://www.layerswap.io/"}
       ],
@@ -315,27 +378,38 @@
 
     {
       "ramp":"Mercuryo",
+      "type":"Infra | Web Ramp | Wallet",
+      "way":"ON",
       "links":[
+        {"text":"Web Ramp", "url":"https://exchange.mercuryo.io/"},
         {"text":"Website", "url":"https://mercuryo.io/"}
       ]
     },
 
     {
       "ramp":"Moonpay",
+      "type":"Infra | Web Ramp",
+      "way":"ON",
       "links":[
+        {"text":"Web Ramp", "url":"https://www.moonpay.com/buy"},
         {"text":"Website", "url":"https://www.moonpay.com/"}
       ]
     },
 
     {
       "ramp":"Mt Pelerin",
+      "type":"Ramp",
+      "way":"ON/OFF",
       "links":[
+        {"text":"Web Ramp", "url":"https://www.mtpelerin.com/on-off-ramp"},
         {"text":"Website", "url":"https://www.mtpelerin.com/"}
       ]
     },
 
     {
       "ramp":"OkCoin",
+      "type":"CEX",
+      "way":"ON/OFF",
       "links":[
         {"text":"Website", "url":"https://www.okcoin.com/"}
       ],
@@ -360,8 +434,11 @@
 
     {
       "ramp":"Ramp",
+      "type":"Infra | Web Ramp",
+      "way":"ON/OFF",
       "links":[
-        {"text":"Website", "url":"https://ramp.network/"}
+        {"text":"Website", "url":"https://ramp.network/"},
+        {"text":"Web Ramp", "url":"https://ramp.network/buy/"}
       ],
       "update":"2022-11-13",
       "funding":[
@@ -410,13 +487,18 @@
 
     {
       "ramp":"Simplex",
+      "type":"Infra | Web Ramp",
+      "way":"ON",
       "links":[
-        {"text":"Website", "url":"https://www.simplex.com/"}
+        {"text":"Website", "url":"https://www.simplex.com/"},
+        {"text":"Web Ramp", "url":"https://buy.chainbits.com/"}
       ]
     },
 
     {
       "ramp":"Swype",
+      "type":"App Wallet",
+      "way":"ON",
       "links":[
         {"text":"Website", "url":"https://www.swype.com/"}
       ]
@@ -424,13 +506,18 @@
 
     {
       "ramp":"Transak",
+      "type":"Infra | Web Ramp",
+      "way":"ON/OFF",
       "links":[
-        {"text":"Website", "url":"https://transak.com/"}
+        {"text":"Website", "url":"https://transak.com/"},
+        {"text":"Web Ramp", "url":"https://global.transak.com/"}
       ]
     },
 
     {
       "ramp":"UTORG",
+      "type":"Infra | Web Ramp",
+      "way":"ON",
       "links":[
         {"text":"Website", "url":"https://utorg.pro/"}
       ]
@@ -438,6 +525,8 @@
 
     {
       "ramp":"Wirex",
+      "type":"FinTech",
+      "way":"ON",
       "links":[
         {"text":"Website", "url":"https://www.wirexapp.com/"}
       ]
@@ -445,6 +534,8 @@
 
     {
       "ramp":"Wyre",
+      "type":"Infra",
+      "way":"ON",
       "links":[
         {"text":"Website", "url":"https://www.sendwyre.com/"}
       ]

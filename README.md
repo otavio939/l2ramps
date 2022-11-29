@@ -1,6 +1,6 @@
 ## **L2 Ramps**
 An open source web page to list and compare on/off ramp providers that support Ethereum Layer 2s.
-The United States version is maintained by [otavio.eth](https://otavio.me/) and can be found at [l2ramps.com](htpps://leramps.com/)
+The United States version is maintained by [otavio.eth](https://otavio.me/) and can be found at [l2ramps.com](htpps://l2ramps.com/)
 
 ### **Mission**
 This site aim to help users reduce costs, comprehend risks, and avoid unnecessary KYCs by going directly to the right service for their needs. 
