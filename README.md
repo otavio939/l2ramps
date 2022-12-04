@@ -56,6 +56,7 @@ _Fixing the website_
 * Optimize images, CSS, and JS - Q1/23
 * Test the forking instructions on Linux, Mac, and Windows - Q2/23
 * Optimize the repository for forks - Q2/23
+* Remove unnecessary dependencies - Q2/23
 
 # **Forking this repository**
 > This website was coded to be host like any static website. Everything is pre-processed offline, no database configuration is necessary.
@@ -76,7 +77,7 @@ _Fixing the website_
 
 4. Compile the production files
 
-    `npx parcel build src/index.html`
+    `npx parcel build src/markup/index.hbs`
 
 5. Copy the files in the "dist" folder to your hosting.
 

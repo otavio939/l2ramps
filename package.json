@@ -9,7 +9,6 @@
   "name": "l2ramps",
   "description": "Web page to compare on-ramp services from Fiat to Ethereum Layer 2s",
   "version": "1.0.0",
-  "main": "index.js",
   "dependencies": {
     "abortcontroller-polyfill": "^1.7.5",
     "acorn": "^8.8.1",
