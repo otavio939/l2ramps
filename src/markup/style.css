@@ -25,7 +25,7 @@
   display: none;
 }
 .wrapper {
-  position: relative;
+  position: absolute;
   }
   .wrapper .tooltip {
   bottom: 100%;
@@ -33,7 +33,7 @@
   color: #fff;
   text-align: center;
   display: block;
-  left: -60px;
+  left: -64px;
   margin-bottom: 15px;
   opacity: 0;
   padding: 10px 5px;

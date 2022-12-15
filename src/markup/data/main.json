@@ -14,44 +14,42 @@
         {"text":"Terms of Use", "url":"https://alchemypay.org/terms-of-use/"},
         {"text":"Privacy Policy", "url":"https://alchemypay.org/privacy-policy/"}
       ],
-      "funding":[
+      "steps":[
         {
-          "method":"Credit/Debit Card",
-          "time":"Minutes",
-          "fee":"4%",
-          "fee-note":"Benchmarked for purchase of USDC with 1000USD on 11/27/22"
+          "title":"Payment",
+          "rows":[
+            {
+              "col-1":"Credit/Debit Card",
+              "col-2":"Minutes",
+              "col-3":"4%",
+              "col-3-tooltip":"Benchmarked for purchase of USDC with 1000USD on 11/27/22"
+            },
+            {
+              "col-1":"Binance Pay",
+              "col-2":"Minutes",
+              "col-3":"0.81%",
+              "col-3-tooltip":"Benchmarked for purchase of USDC with 1000USD on 11/27/22"
+            }
+          ]
         },
         {
-          "method":"Binance Pay",
-          "time":"Minutes",
-          "fee":"0.81%",
-          "fee-note":"Benchmarked for purchase of USDC with 1000USD on 11/27/22"
-        }
-      ],
-      "purchase":[
-        {
-          "method":"Market buy on web app"
-        }
-      ],
-      "withdraw":[
-        {
-          "token":"ETH",
-          "layer2s":[
-            {"layer2":"Arbitrum"}
-          ],
-          "fee":"Network fee"
-        },
-        {
-          "token":"USDC",
-          "layer2s":[
-            {"layer2":"Arbitrum"}
-          ],
-          "fee":"Network fee"
-        },
-        {
-          "token":"USDT",
-          "layer2s":[
-            {"layer2":"Arbitrum"}
+          "title":"Withdraw",
+          "rows":[
+            {
+              "col-1":"ETH",
+              "col-2":"Arbitrum",
+              "col-3":"Network fee"
+            },
+            {
+              "col-1":"USDC",
+              "col-2":"Arbitrum",
+              "col-3":"Network fee"
+            },
+            {
+              "col-1":"USDT",
+              "col-2":"Arbitrum",
+              "col-3":"Network fee"
+            }
           ]
         }
       ]
@@ -61,61 +59,51 @@
       "ramp":"Banxa",
       "type":"Infra | Web Ramp",
       "way":"ON",
+      "kyc":"Email, Name, Address, SSN",
       "links":[
-        {"text":"Website", "url":"https://banxa.com/"}
+        {"text":"Web Ramp", "url":"https://checkout.banxa.com/"},
+        {"text":"Website", "url":"https://banxa.com/"},
+        {"text":"Terms and Conditions", "url":"https://banxa.com/wp-content/uploads/2022/10/Customer-Terms-and-Conditions-1-July-2022.pdf"},
+        {"text":"Privacy Policy", "url":"https://banxa.com/wp-content/uploads/2022/10/Privacy-and-Cookies-Policy-1-July-2022.pdf"},
+        {"text":"Zero Hash User Agreement", "url":"https://www.zerohash.com/banxa"}
       ],
       "update":"2022-11-20",
-      "funding":[
+      "steps":[
         {
-          "method":"Domestic Wire",
-          "time":"1-3 business days",
-          "fee":"$18.00"
-        },
-        {
-          "method":"Credit/Debit Card",
-          "time":"Minutes",
-          "fee":"1.99%"
-        },
-        {
-          "method":"Google Pay",
-          "time":"Minutes",
-          "fee":"1.99%"
-        }
-      ],
-      "purchase":[
-        {
-          "method":"Market buy on web app",
-          "fee":"No fee"
-        }
-      ],
-      "withdraw":[
-        {
-          "token":"ETH",
-          "layer2s":[
-            {"layer2":"Arbitrum"},
-            {"layer2":"Optimism"},
-            {"layer2":"Starknet"},
-            {"layer2":"ZkSync"}
+          "title":"Funding",
+          "rows":[
+            {
+              "col-1":"Wire",
+              "col-2":"1-3 days",
+              "col-3":"$18.00"
+            },
+            {
+              "col-1":"Credit/Debit Card",
+              "col-2":"Minutes",
+              "col-3":"1.99%"
+            },
+            {
+              "col-1":"Google Pay",
+              "col-2":"Minutes",
+              "col-3":"1.99%"
+            }
           ]
         },
         {
-          "token":"USDT",
-          "layer2s":[
-            {"layer2":"Arbitrum"},
-            {"layer2":"Optimism"},
-            {"layer2":"Loopring"},
-            {"layer2":"ZkSync"}
+          "title":"Withdraw",
+          "rows":[
+            {
+              "col-1":"ETH",
+              "col-2":"Arbitrum, Optimism, Starknet, ZkSync",
+              "col-3":"Free"
+            },
+            {
+              "col-1":"USDT",
+              "col-2":"Arbitrum, Optimism, ZkSync",
+              "col-3":"Free"
+            }
           ]
         }
-      ]
-    },
-
-    {
-      "ramp":"Bybit",
-      "type": "CEX",
-      "way":"ON",
-      "links":[
-        {"text":"Website", "url":"https://www.bybit.com/en-US/"}
       ]
     },
 
@@ -124,59 +112,57 @@
       "type":"CEX",
       "way":"ON/OFF",
       "links":[
+        {"text":"Web Ramp", "url":"https://www.binance.us/"},
         {"text":"Website", "url":"https://www.binance.us/"}
       ],
-      "funding":[
+      "steps":[
         {
-          "method":"ACH",
-          "time":"TBD",
-          "fee":"0.15%",
-          "fee-note":"Taker fee at lowest tier"
-        },
-        {
-          "method":"Domestic Wire",
-          "time":"TBD",
-          "fee":"$10-15"
-        },
-        {
-          "method":"Debit Card",
-          "time":"Minutes",
-          "fee":"3.75%"    
-        },
-        {
-          "method":"ApplePay",
-          "time":"Minutes",
-          "fee":"3.75%"    
-        }
-      ],
-      "purchase":[
-        {
-          "method":"Trading on plataform"
-        }
-      ],
-      "withdraw":[
-        {
-          "token":"ETH",
-          "layer2s":[
-            {"layer2":"Arbitrum"},
-            {"layer2":"Optimism"}
+          "title":"Funding",
+          "rows":[
+            {
+              "col-1":"ACH",
+              "col-2":"TBD",
+              "col-3":"0.15%",
+              "col-3-tooltip":"Taker fee at lowest tier"
+            },
+            {
+              "col-1":"Wire",
+              "col-2":"TBD",
+              "col-3":"$10-15"
+            },
+            {
+              "col-1":"Debit Card",
+              "col-2":"Minutes",
+              "col-3":"3.75%"    
+            },
+            {
+              "col-1":"ApplePay",
+              "col-2":"Minutes",
+              "col-3":"3.75%"    
+            }
           ]
         },
         {
-          "token":"OP",
-          "layer2s":[
-            {"layer2":"Optimism"}
+          "title":"Purchase",
+          "rows":[
+            {
+              "col-1":"Trading on plataform"
+            }
+          ]
+        },
+        {
+          "title":"Withdraw",
+          "rows":[
+            {
+              "col-1":"ETH",
+              "col-2":"Arbitrum, Optimism"
+            },
+            {
+              "col-1":"OP",
+              "col-2":"Optimism"
+            }
           ]
         }
-      ]
-    },
-
-    {
-      "ramp":"Bitkub",
-      "type":"CEX",
-      "way":"ON",
-      "links":[
-        {"text":"Website", "url":"https://www.bitkub.com/"}
       ]
     },
 
@@ -188,41 +174,33 @@
         {"text":"Website", "url":"https://coinbase.com/"}
       ],
       "update":"2022-11-06",
-      "funding":[
+      "steps":[
         {
-          "method":"ACH",
-          "time":"5 days",
-          "fee":"0.6%",
-          "fee-note":"Taker fee using the Advance Trading interface"
+          "title":"Funding",
+          "rows":[
+            {
+              "col-1":"ACH",
+              "col-2":"5 days",
+              "col-3":"0.6%",
+              "col-3-tooltip":"Taker fee using the Advance Trading interface"
+            },
+            {
+              "col-1":"Credit/Debit Card",
+              "col-2":"5 days",
+              "col-3":"0.6%",
+              "col-3-tooltip":"Taker fee using the Advance Trading interface"
+            }
+          ]
         },
         {
-          "method":"Credit/Debit Card",
-          "time":"5 days",
-          "fee":"0.6%",
-          "fee-note":"Taker fee using the Advance Trading interface"
-        }
-      ],
-      "withdraw":[
-        {
-          "token":"OP",
-          "layer2s":[
-            {"layer2":"Optimism"}
+          "title":"Withdraw",
+          "rows":[
+            {
+              "col-1":"OP",
+              "col-2":"Optimism"
+            }
           ]
         }
-      ],
-      "layer2s":[
-      ],
-      "time":"5 days",
-      "fee":"0.6%"
-    },
-
-    {
-      "ramp":"Coinify",
-      "type":"Infra | Web Ramp",
-      "way":"ON",
-      "links":[
-        {"text":"Website", "url":"https://www.coinify.com/"},
-        {"text":"Web Ramp", "url":"https://mycoinify.com/trade/"}
       ]
     },
 
@@ -241,41 +219,47 @@
       "links":[
         {"text":"Website", "url":"https://www.cryptorefills.com/"}
       ],
-      "funding":[
+      "steps":[
         {
-          "method":"L2 Tokens",
-          "time":"Minutes",
-          "fee":"Gas fee"
+          "title":"Crypto Deposit",
+          "rows":[
+            {
+              "col-1":"MIM",
+              "col-2":"Arbitrum",
+              "col-3":"Network fee"
+            },
+            {
+              "col-1":"FRAX",
+              "col-2":"Arbitrum",
+              "col-3":"Network fee"
+            },
+            {
+              "col-1":"DAI",
+              "col-2":"Arbitrum",
+              "col-3":"Network fee"
+            },
+            {
+              "col-1":"USDC",
+              "col-2":"Arbitrum",
+              "col-3":"Network fee"
+            },
+            {
+              "col-1":"USDT",
+              "col-2":"Arbitrum",
+              "col-3":"Network fee"  
+            }
+          ]
+        },
+        {
+          "title":"Buy and redeem gift cards",
+          "rows":[
+            {
+              "col-1":"Hundreds of gift cards available",
+              "col-2":"As soon as payment is confirmed",
+              "col-3":"No service fee"
+            }
+          ]
         }
-      ],
-      "withdraw":[
-        {
-          "token":"DAI",
-          "layer2s":[
-            {"layer2":"Arbitrum"}
-          ]    
-        },
-        {
-          "token":"FRAX",
-          "layer2s":[
-            {"layer2":"Arbitrum"}
-          ]    
-        },
-        {
-          "token":"USDC",
-          "layer2s":[
-            {"layer2":"Arbitrum"}
-          ]    
-        },
-        {
-          "token":"USDT",
-          "layer2s":[
-            {"layer2":"Arbitrum"}
-          ]    
-        }
-      ],
-      "layer2s":[
-        {"layer2":"Arbitrum"}
       ]
     },
 
@@ -295,31 +279,33 @@
         {"text":"Website", "url":"https://juno.finance/"}
       ],
       "update":"2022-11-06",
-      "funding":[
+      "steps":[
         {
-          "method":"ACH",
-          "time":"5 days",
-          "fee":"Free"
-        },
-        {
-          "method":"Direct Deposit",
-          "time":"5 days",
-          "fee":"Free"
-        }
-      ],
-      "withdraw":[
-        {
-          "token":"ETH",
-          "layer2s":[
-            {"layer2":"Arbitrum"},
-            {"layer2":"Optimism"}
+          "title":"Funding",
+          "rows":[
+            {
+              "col-1":"ACH",
+              "col-2":"5 days",
+              "col-3":"Free"
+            },
+            {
+              "col-1":"Direct Deposit",
+              "col-2":"5 days",
+              "col-3":"Free"
+            }
           ]
         },
         {
-          "token":"USDC",
-          "layer2s":[
-            {"layer2":"Arbitrum"},
-            {"layer2":"Optimism"}
+          "title":"Withdraw",
+          "rows":[
+            {
+              "col-1":"ETH",
+              "col-2":"Arbitrum, Optimism"
+            },
+            {
+              "col-1":"USDC",
+              "col-2":"Arbitrum, Optimism"
+            }
           ]
         }
       ]
@@ -330,28 +316,47 @@
       "type":"CEX",
       "way":"ON",
       "links":[
+        {"text":"Web Ramp", "url":"https://www.kucoin.com/express"},
         {"text":"Website", "url":"https://www.kucoin.com/"}
       ],
-      "withdraw":[
+      "steps":[
         {
-          "token":"ETH",
-          "layer2s":[
-            {"layer2":"Arbitrum"},
-            {"layer2":"Optimism"}
+          "title":"Funding",
+          "rows":[
+            {"col-1":"ACH"},
+            {"col-1":"Wire"},
+            {"col-1":"ApplePay"},
+            {"col-1":"Visa/Mastercard"}
           ]
         },
         {
-          "token":"USDC",
-          "layer2s":[
-            {"layer2":"Arbitrum"},
-            {"layer2":"Optimism"}
-          ]
-        },
-        {
-          "token":"USDT",
-          "layer2s":[
-            {"layer2":"Arbitrum"},
-            {"layer2":"Optimism"}
+          "title":"Withdraw",
+          "rows":[
+            {
+              "col-1":"ETH",
+              "col-2":"Arbitrum, Optimism",
+              "col-3":"0.001 ETH"
+            },
+            {
+              "col-1":"USDC",
+              "col-2":"Arbitrum, Optimism",
+              "col-3":"3 USDC"
+            },
+            {
+              "col-1":"USDT",
+              "col-2":"Arbitrum, Optimism",
+              "col-3":"3 USDT"
+            },
+            {
+              "col-1":"AAVE",
+              "col-2":"Arbitrum",
+              "col-3":"0.001 AAVE"
+            },
+            {
+              "col-1":"YFI",
+              "col-2":"Arbitrum",
+              "col-3":"0.0001 YFI"
+            }
           ]
         }
       ]
@@ -362,16 +367,43 @@
       "type":"Ramp",
       "way":"ON/OFF",
       "links":[
-        {"text":"Website", "url":"https://www.layerswap.io/"}
+        {"text":"Website", "url":"https://www.layerswap.io/"},
+        {"text":"Terms of Use", "url":"https://docs.layerswap.io/user-docs/information/terms-of-services"},
+        {"text":"Privacy Policy", "url":"https://docs.layerswap.io/user-docs/information/privacy-policy"}
       ],
-      "funding":[
+      "steps":[
         {
-          "method":"ACH"
-        }
-      ],
-      "withdraw":[
+          "title":"Purchase a supported token on a supported exchange",
+          "rows":[
+            {
+              "col-1":"Coinbase, Kucoin, Kraken, Crypto.com, Bittrex"
+            }
+          ]
+        },
         {
-          "token":"USDC"
+          "title":"Withdraw",
+          "rows":[
+            {
+              "col-1":"ETH",
+              "col-2":"Arbitrum One, Arbitrum Nova, Boba, ImmutableX, Loopring, Optimism, Starknet, ZKSpace, ZkSync"
+            },
+            {
+              "col-1":"USDC", 
+              "col-2":"Arbitrum, Loopring, Optimism, ZkSync"
+            },
+            {
+              "col-1":"USDT",
+              "col-2":"ZKSpace"
+            },
+            {
+              "col-1":"LRC",
+              "col-2":"Loopring"
+            },
+            {
+              "col-1":"SNX",
+              "col-2":"Optimism"
+            }
+          ]
         }
       ]
     },
@@ -414,19 +446,25 @@
         {"text":"Website", "url":"https://www.okcoin.com/"}
       ],
       "update":"2022-11-06",
-      "funding":[
+      "steps":[
         {
-          "method":"ACH",
-          "time":"5 days",
-          "fee":"0.2% + Gas fee",
-          "fee-note":"Taker fee at lowest tier"
-        }
-      ],
-      "withdraw":[
+          "title":"Funding",
+          "rows":[
+            {
+              "col-1":"ACH",
+              "col-2":"5 days",
+              "col-3":"0.2% + Gas fee",
+              "col-3-tooltip":"Taker fee at lowest tier"
+            }
+          ]
+        },
         {
-          "token":"OP",
-          "layer2s":[
-            {"layer2":"Optimism"}
+          "title":"Withdraw",
+          "rows":[
+            {
+              "col-1":"OP",
+              "col-2":"Optimism"
+            }
           ]
         }
       ]
@@ -441,45 +479,41 @@
         {"text":"Web Ramp", "url":"https://ramp.network/buy/"}
       ],
       "update":"2022-11-13",
-      "funding":[
+      "steps":[
         {
-          "method":"ApplePay",
-          "time":"Minutes",
-          "fee":"2.81%"
-        },
-        {
-          "method":"Credit/Debit Card",
-          "time":"Minutes",
-          "fee":"2.81%"
-        }
-      ],
-      "withdraw":[
-        {
-          "token":"ETH",
-          "layer2s":[
-            {"layer2":"Arbitrum"},
-            {"layer2":"Optimism"},
-            {"layer2":"Starknet"},
-            {"layer2":"ZkSync"}
+          "title":"Funding",
+          "rows":[
+            {
+              "col-1":"ApplePay",
+              "col-2":"Minutes",
+              "col-3":"2.81%"
+            },
+            {
+              "col-1":"Credit/Debit Card",
+              "col-2":"Minutes",
+              "col-3":"2.81%"
+            }
           ]
         },
         {
-          "token":"DAI",
-          "layer2s":[
-            {"layer2":"Optimism"},
-            {"layer2":"ZkSync"}
-          ]
-        },
-        {
-          "token":"USDC",
-          "layer2s":[
-            {"layer2":"ZkSync"}
-          ]
-        },
-        {
-          "token":"USDT",
-          "layer2s":[
-            {"layer2":"ZkSync"}
+          "title":"Withdraw",
+          "rows":[
+            {
+              "col-1":"ETH",
+              "col-2":"Arbitrum, Optimism, Starknet, ZkSync"
+            },
+            {
+              "col-1":"DAI",
+              "col-2":"Optimism, ZkSync"
+            },
+            {
+              "col-1":"USDC",
+              "col-2":"ZkSync"
+            },
+            {
+              "col-1":"USDT",
+              "col-2":"ZkSync"
+            }
           ]
         }
       ]

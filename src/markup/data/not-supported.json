@@ -1,0 +1,10 @@
+{
+    "ramps":[
+        {"name":"Bitfinex"},
+        {"name":"Bitkub"},
+        {"name":"Bybit"},
+        {"name":"Coinify"},
+        {"name":"Huobi"},
+        {"name":"OKX"}
+    ]
+}
