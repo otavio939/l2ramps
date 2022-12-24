@@ -9,14 +9,14 @@
       "fast-ramp":"Yes",
       "low-cost":"No",
       "links":[
-        {"text":"Web Ramp", "url":"https://ramp.alchemypay.org/"},
-        {"text":"Website", "url":"https://alchemypay.org/"},
-        {"text":"Terms of Use", "url":"https://alchemypay.org/terms-of-use/"},
-        {"text":"Privacy Policy", "url":"https://alchemypay.org/privacy-policy/"}
+        {"text":"Web Ramp","url":"https://ramp.alchemypay.org/"},
+        {"text":"Website","url":"https://alchemypay.org/"},
+        {"text":"Terms of Use","url":"https://alchemypay.org/terms-of-use/"},
+        {"text":"Privacy Policy","url":"https://alchemypay.org/privacy-policy/"}
       ],
-      "steps":[
+      "info":[
         {
-          "title":"Payment",
+          "title":"Payment Methods",
           "rows":[
             {
               "col-1":"Credit/Debit Card",
@@ -33,21 +33,21 @@
           ]
         },
         {
-          "title":"Withdraw",
+          "title":"Withdraw Options",
           "rows":[
             {
               "col-1":"ETH",
-              "col-2":"Arbitrum",
+              "col-2":"Arbitrum One",
               "col-3":"Network fee"
             },
             {
               "col-1":"USDC",
-              "col-2":"Arbitrum",
+              "col-2":"Arbitrum One",
               "col-3":"Network fee"
             },
             {
               "col-1":"USDT",
-              "col-2":"Arbitrum",
+              "col-2":"Arbitrum One",
               "col-3":"Network fee"
             }
           ]
@@ -61,19 +61,19 @@
       "way":"ON",
       "kyc":"Email, Name, Address, SSN",
       "links":[
-        {"text":"Web Ramp", "url":"https://checkout.banxa.com/"},
-        {"text":"Website", "url":"https://banxa.com/"},
-        {"text":"Terms and Conditions", "url":"https://banxa.com/wp-content/uploads/2022/10/Customer-Terms-and-Conditions-1-July-2022.pdf"},
-        {"text":"Privacy Policy", "url":"https://banxa.com/wp-content/uploads/2022/10/Privacy-and-Cookies-Policy-1-July-2022.pdf"},
-        {"text":"Zero Hash User Agreement", "url":"https://www.zerohash.com/banxa"}
+        {"text":"Web Ramp","url":"https://checkout.banxa.com/"},
+        {"text":"Website","url":"https://banxa.com/"},
+        {"text":"Terms of Use","url":"https://banxa.com/wp-content/uploads/2022/10/Customer-Terms-and-Conditions-1-July-2022.pdf"},
+        {"text":"Privacy Policy","url":"https://banxa.com/wp-content/uploads/2022/10/Privacy-and-Cookies-Policy-1-July-2022.pdf"},
+        {"text":"Zero Hash Terms of Use","url":"https://www.zerohash.com/banxa"}
       ],
       "update":"2022-11-20",
-      "steps":[
+      "info":[
         {
           "title":"Funding",
           "rows":[
             {
-              "col-1":"Wire",
+              "col-1":"Wire Transfer",
               "col-2":"1-3 days",
               "col-3":"$18.00"
             },
@@ -90,7 +90,7 @@
           ]
         },
         {
-          "title":"Withdraw",
+          "title":"Withdraw Options",
           "rows":[
             {
               "col-1":"ETH",
@@ -110,23 +110,24 @@
     {
       "ramp":"Binance.US",
       "type":"CEX",
-      "way":"ON/OFF",
+      "way":"ON / OFF",
       "links":[
-        {"text":"Web Ramp", "url":"https://www.binance.us/"},
-        {"text":"Website", "url":"https://www.binance.us/"}
+        {"text":"Web Ramp","url":"https://www.binance.us/"},
+        {"text":"Website","url":"https://www.binance.us/"},
+        {"text":"Terms of Use","url":"https://www.binance.us/terms-of-use"},
+        {"text":"Privacy Policy","url":"https://www.binance.us/privacy-policy"}
       ],
-      "steps":[
+      "info":[
         {
           "title":"Funding",
           "rows":[
             {
-              "col-1":"ACH",
-              "col-2":"TBD",
-              "col-3":"0.15%",
-              "col-3-tooltip":"Taker fee at lowest tier"
+              "col-1":"Bank Account (ACH)",
+              "col-2":"5 days",
+              "col-3":"Free"
             },
             {
-              "col-1":"Wire",
+              "col-1":"Wire Transfer",
               "col-2":"TBD",
               "col-3":"$10-15"
             },
@@ -143,19 +144,21 @@
           ]
         },
         {
-          "title":"Purchase",
+          "title":"Trading",
           "rows":[
             {
-              "col-1":"Trading on plataform"
+              "col-1":"Market trade",
+              "col-2":"0.15% (taker fee)",
+              "col-2-tooltip": "Taker fee at lowest tier"
             }
           ]
         },
         {
-          "title":"Withdraw",
+          "title":"Withdraw Options",
           "rows":[
             {
               "col-1":"ETH",
-              "col-2":"Arbitrum, Optimism"
+              "col-2":"Arbitrum One, Optimism"
             },
             {
               "col-1":"OP",
@@ -169,31 +172,61 @@
     {
       "ramp":"Coinbase",
       "type":"CEX | Wallet",
-      "way":"ON/OFF",
+      "way":"ON / OFF",
       "links":[
-        {"text":"Website", "url":"https://coinbase.com/"}
+        {"text":"Website","url":"https://coinbase.com/"},
+        {"text":"Terms of Use","url":"https://www.coinbase.com/legal/user_agreement/united_states"},
+        {"text":"Privacy Policy","url":"https://www.coinbase.com/legal/privacy"}
       ],
       "update":"2022-11-06",
-      "steps":[
+      "info":[
         {
           "title":"Funding",
           "rows":[
             {
-              "col-1":"ACH",
-              "col-2":"5 days",
-              "col-3":"0.6%",
-              "col-3-tooltip":"Taker fee using the Advance Trading interface"
+              "col-1":"ApplePay",
+              "col-2":"Minutes"
             },
             {
-              "col-1":"Credit/Debit Card",
-              "col-2":"5 days",
-              "col-3":"0.6%",
-              "col-3-tooltip":"Taker fee using the Advance Trading interface"
+              "col-1":"Google Pay",
+              "col-2":"Minutes"
+            },
+            {
+              "col-1":"Debit Card",
+              "col-2":"Minutes",
+              "col-3":"3.837%",
+              "col-3-tooltip":"From order preview created on 12/19/2022-14:50 for a purchase of $1000 of USDC using a MasterCard debit card. Coinbase does not disclosure this fee."
+            },
+            {
+              "col-1":"Bank Account (ACH)",
+              "col-2":"3-5 business days",
+              "col-3":"Free"
+            },
+            {
+              "col-1":"Domestic Wire",
+              "col-2":"1-3 business days",
+              "col-3":"$10 for incoming transfers",
+              "col-3-tooltip":"and $25 for outgoing transfers"
             }
           ]
         },
         {
-          "title":"Withdraw",
+          "title":"Trading",
+          "rows":[
+            {
+              "col-1":"Advanced Trade - Volatile Pairs",
+              "col-2":"0.6%",
+              "col-2-tooltip":"Taker fee at the lowest volume tier"
+            },
+            {
+              "col-1":"Advanced Trade - Stable Pairs",
+              "col-2":"0.001%",
+              "col-2-tooltip":"Taker fee for any volume"
+            }
+          ]
+        },
+        {
+          "title":"Withdraw Options",
           "rows":[
             {
               "col-1":"OP",
@@ -208,7 +241,9 @@
       "ramp":"Crypto.com",
       "type":"CEX",
       "links":[
-        {"text":"Website", "url":"https://crypto.com/us/"}
+        {"text":"Website","url":"https://crypto.com/us/"},
+        {"text":"Terms of Use","url":"https://crypto.com/document/entity_us.pdf"},
+        {"text":"Privacy Policy","url":"https://crypto.com/privacy/privacy_us.pdf"}
       ]
     },
 
@@ -217,35 +252,37 @@
       "type":"E-Commerce",
       "way":"OFF",
       "links":[
-        {"text":"Website", "url":"https://www.cryptorefills.com/"}
+        {"text":"Website","url":"https://www.cryptorefills.com/"},
+        {"text":"Terms of Use","url":"https://www.cryptorefills.com/blog/terms-and-conditions/"},
+        {"text":"Privacy Policy","url":"https://www.cryptorefills.com/privacy-policy"}
       ],
-      "steps":[
+      "info":[
         {
           "title":"Crypto Deposit",
           "rows":[
             {
               "col-1":"MIM",
-              "col-2":"Arbitrum",
+              "col-2":"Arbitrum One",
               "col-3":"Network fee"
             },
             {
               "col-1":"FRAX",
-              "col-2":"Arbitrum",
+              "col-2":"Arbitrum One",
               "col-3":"Network fee"
             },
             {
               "col-1":"DAI",
-              "col-2":"Arbitrum",
+              "col-2":"Arbitrum One",
               "col-3":"Network fee"
             },
             {
               "col-1":"USDC",
-              "col-2":"Arbitrum",
+              "col-2":"Arbitrum One",
               "col-3":"Network fee"
             },
             {
               "col-1":"USDT",
-              "col-2":"Arbitrum",
+              "col-2":"Arbitrum One",
               "col-3":"Network fee"  
             }
           ]
@@ -267,24 +304,29 @@
       "ramp":"Fluid Finance",
       "type":"FinTech",
       "links":[
-        {"text":"Website", "url":"https://fluid.ch/"}
+        {"text":"Website","url":"https://fluid.ch/"},
+        {"text":"Terms of Use","url":"https://fluid.ch/terms-conditions/"},
+        {"text":"Privacy Policy","url":"https://fluid.ch/privacy-policy/"}
       ]
     },
 
     {
       "ramp":"Juno",
       "type":"FinTech",
-      "way":"ON/OFF",
+      "way":"ON / OFF",
       "links":[
-        {"text":"Website", "url":"https://juno.finance/"}
+        {"text":"Web Ramp","url":"https://juno.finance/pay"},
+        {"text":"Website","url":"https://juno.finance/"},
+        {"text":"Legal Disclosures","url":"https://juno.finance/legal"},
+        {"text":"Privacy Policy","url":"https://juno.finance/legal/privacy-policy"}
       ],
       "update":"2022-11-06",
-      "steps":[
+      "info":[
         {
           "title":"Funding",
           "rows":[
             {
-              "col-1":"ACH",
+              "col-1":"Bank Account (ACH)",
               "col-2":"5 days",
               "col-3":"Free"
             },
@@ -296,15 +338,15 @@
           ]
         },
         {
-          "title":"Withdraw",
+          "title":"Withdraw Options",
           "rows":[
             {
               "col-1":"ETH",
-              "col-2":"Arbitrum, Optimism"
+              "col-2":"Arbitrum One, Optimism"
             },
             {
               "col-1":"USDC",
-              "col-2":"Arbitrum, Optimism"
+              "col-2":"Arbitrum One, Optimism"
             }
           ]
         }
@@ -316,45 +358,47 @@
       "type":"CEX",
       "way":"ON",
       "links":[
-        {"text":"Web Ramp", "url":"https://www.kucoin.com/express"},
-        {"text":"Website", "url":"https://www.kucoin.com/"}
+        {"text":"Web Ramp","url":"https://www.kucoin.com/express"},
+        {"text":"Website","url":"https://www.kucoin.com/"},
+        {"text":"Terms of Use","url":"https://www.kucoin.com/news/en-terms-of-use"},
+        {"text":"Privacy Policy","url":"https://www.kucoin.com/news/en-privacy-policy"}
       ],
-      "steps":[
+      "info":[
         {
           "title":"Funding",
           "rows":[
-            {"col-1":"ACH"},
-            {"col-1":"Wire"},
+            {"col-1":"Bank Account (ACH)"},
+            {"col-1":"Wire Transfer"},
             {"col-1":"ApplePay"},
             {"col-1":"Visa/Mastercard"}
           ]
         },
         {
-          "title":"Withdraw",
+          "title":"Withdraw Options",
           "rows":[
             {
               "col-1":"ETH",
-              "col-2":"Arbitrum, Optimism",
+              "col-2":"Arbitrum One, Optimism",
               "col-3":"0.001 ETH"
             },
             {
               "col-1":"USDC",
-              "col-2":"Arbitrum, Optimism",
+              "col-2":"Arbitrum One, Optimism",
               "col-3":"3 USDC"
             },
             {
               "col-1":"USDT",
-              "col-2":"Arbitrum, Optimism",
+              "col-2":"Arbitrum One, Optimism",
               "col-3":"3 USDT"
             },
             {
               "col-1":"AAVE",
-              "col-2":"Arbitrum",
+              "col-2":"Arbitrum One",
               "col-3":"0.001 AAVE"
             },
             {
               "col-1":"YFI",
-              "col-2":"Arbitrum",
+              "col-2":"Arbitrum One",
               "col-3":"0.0001 YFI"
             }
           ]
@@ -365,13 +409,13 @@
     {
       "ramp":"Layerswap",
       "type":"Ramp",
-      "way":"ON/OFF",
+      "way":"ON / OFF",
       "links":[
-        {"text":"Website", "url":"https://www.layerswap.io/"},
-        {"text":"Terms of Use", "url":"https://docs.layerswap.io/user-docs/information/terms-of-services"},
-        {"text":"Privacy Policy", "url":"https://docs.layerswap.io/user-docs/information/privacy-policy"}
+        {"text":"Website","url":"https://www.layerswap.io/"},
+        {"text":"Terms of Use","url":"https://docs.layerswap.io/user-docs/information/terms-of-services"},
+        {"text":"Privacy Policy","url":"https://docs.layerswap.io/user-docs/information/privacy-policy"}
       ],
-      "steps":[
+      "info":[
         {
           "title":"Purchase a supported token on a supported exchange",
           "rows":[
@@ -381,7 +425,7 @@
           ]
         },
         {
-          "title":"Withdraw",
+          "title":"Withdraw Options",
           "rows":[
             {
               "col-1":"ETH",
@@ -413,8 +457,10 @@
       "type":"Infra | Web Ramp | Wallet",
       "way":"ON",
       "links":[
-        {"text":"Web Ramp", "url":"https://exchange.mercuryo.io/"},
-        {"text":"Website", "url":"https://mercuryo.io/"}
+        {"text":"Web Ramp","url":"https://exchange.mercuryo.io/"},
+        {"text":"Website","url":"https://mercuryo.io/"},
+        {"text":"Terms of Use","url":"https://mercuryo.io/legal/terms/"},
+        {"text":"Privacy Policy","url":"https://mercuryo.io/legal/privacy/"}
       ]
     },
 
@@ -423,47 +469,100 @@
       "type":"Infra | Web Ramp",
       "way":"ON",
       "links":[
-        {"text":"Web Ramp", "url":"https://www.moonpay.com/buy"},
-        {"text":"Website", "url":"https://www.moonpay.com/"}
-      ]
-    },
-
-    {
-      "ramp":"Mt Pelerin",
-      "type":"Ramp",
-      "way":"ON/OFF",
-      "links":[
-        {"text":"Web Ramp", "url":"https://www.mtpelerin.com/on-off-ramp"},
-        {"text":"Website", "url":"https://www.mtpelerin.com/"}
+        {"text":"Web Ramp","url":"https://www.moonpay.com/buy"},
+        {"text":"Website","url":"https://www.moonpay.com/"},
+        {"text":"Terms of Use","url":"https://www.moonpay.com/legal/terms_of_use_usa"},
+        {"text":"Privacy Policy","url":"https://www.moonpay.com/legal/privacy_policy"}
+      ],
+      "info":[
+        {
+          "title":"Withdraw Options",
+          "rows":[
+            {
+              "col-1":"ETH",
+              "col-2":"Arbitrum, Optimism, ZkSync"
+            },
+            {
+              "col-1":"DAI",
+              "col-2":"ZkSync"
+            },
+            {
+              "col-1":"USDC",
+              "col-2":"Optimism, ZkSync"
+            },
+            {
+              "col-1":"USDT",
+              "col-2":"ZkSync"
+            },
+            {
+              "col-1":"IMX",
+              "col-2":"Immutable X"
+            },
+            {
+              "col-1":"LRC",
+              "col-2":"Loopring"
+            },
+            {
+              "col-1":"MAGIC",
+              "col-2":"Arbitrum One"
+            }
+          ]
+        }
       ]
     },
 
     {
       "ramp":"OkCoin",
       "type":"CEX",
-      "way":"ON/OFF",
+      "way":"ON / OFF",
       "links":[
-        {"text":"Website", "url":"https://www.okcoin.com/"}
+        {"text":"Website","url":"https://www.okcoin.com/"},
+        {"text":"Terms of Use","url":"https://support.okcoin.com/hc/en-us/articles/360059514492-Terms-of-Service"},
+        {"text":"Privacy Policy","url":"https://www.okcoin.com/privacy-policy.html"}
       ],
       "update":"2022-11-06",
-      "steps":[
+      "info":[
         {
           "title":"Funding",
           "rows":[
             {
-              "col-1":"ACH",
-              "col-2":"5 days",
-              "col-3":"0.2% + Gas fee",
-              "col-3-tooltip":"Taker fee at lowest tier"
+              "col-1":"Bank Account (ACH)",
+              "col-2":"5 business days",
+              "col-3":"Free"
+            },
+            {
+              "col-1":"Wire Transfer",
+              "col-2":"1-3 business days",
+              "col-3":"Free for incoming transfers"
+            },
+            {
+              "col-1":"Debit Card",
+              "col-2":"Minutes",
+              "col-3":"2.49%"
             }
           ]
         },
         {
-          "title":"Withdraw",
+          "title":"Trading",
           "rows":[
             {
+              "col-1":"Market trade",
+              "col-2":"0.2% (taker fee)"
+            }
+          ]
+        },
+        {
+          "title":"Withdraw Options",
+          "rows":[
+            {
+              "col-1":"MAGIC",
+              "col-2":"Arbitrum One",
+              "col-3":"Network fee"
+            },
+            {
               "col-1":"OP",
-              "col-2":"Optimism"
+              "col-2":"Optimism",
+              "col-3":"Network fee"
             }
           ]
         }
@@ -473,15 +572,17 @@
     {
       "ramp":"Ramp",
       "type":"Infra | Web Ramp",
-      "way":"ON/OFF",
+      "way":"ON / OFF",
       "links":[
-        {"text":"Website", "url":"https://ramp.network/"},
-        {"text":"Web Ramp", "url":"https://ramp.network/buy/"}
+        {"text":"Web Ramp","url":"https://ramp.network/buy/"},
+        {"text":"Website","url":"https://ramp.network/"},
+        {"text":"Terms of Use","url":"https://ramp.network/terms-of-service/"},
+        {"text":"Privacy Policy","url":"https://ramp.network/terms-of-service/#privacy-policy"}
       ],
       "update":"2022-11-13",
-      "steps":[
+      "info":[
         {
-          "title":"Funding",
+          "title":"Payment Methods",
           "rows":[
             {
               "col-1":"ApplePay",
@@ -496,7 +597,7 @@
           ]
         },
         {
-          "title":"Withdraw",
+          "title":"Withdraw Options",
           "rows":[
             {
               "col-1":"ETH",
@@ -524,36 +625,79 @@
       "type":"Infra | Web Ramp",
       "way":"ON",
       "links":[
-        {"text":"Website", "url":"https://www.simplex.com/"},
-        {"text":"Web Ramp", "url":"https://buy.chainbits.com/"}
+        {"text":"Web Ramp","url":"https://buy.chainbits.com/"},
+        {"text":"Website","url":"https://www.simplex.com/"},
+        {"text":"Terms of Use","url":"https://www.simplex.com/terms-of-use/payment-terms"},
+        {"text":"Privacy Policy","url":"https://www.simplex.com/privacy-policy"}
+      ],
+      "info":[
+        {
+          "title":"Payment Methods",
+          "rows":[
+            {"col-1":"Credit/Debit Card","col-2":"15.81%","col-2-tooltip":"From order preview created on 12/19/2022-15:22 for a purchase of $1000 of ETH on Arbitrum One using a VISA debit card. The website does not breakdown the amount your paying for the token and fees"}
+          ]
+        },
+        {
+          "title":"Withdraw Options",
+          "rows":[
+            {"col-1":"ETH","col-2":"Arbitrum One, Optimism"},
+            {"col-1":"OP","col-2":"Optimism"}
+          ]
+        }
       ]
     },
 
     {
       "ramp":"Swype",
-      "type":"App Wallet",
+      "type":"FinTech",
       "way":"ON",
       "links":[
-        {"text":"Website", "url":"https://www.swype.com/"}
+        {"text":"Website","url":"https://www.swype.com/"},
+        {"text":"Terms of Use and Privacy Policy","url":"https://www.swype.com/terms-of-use"}
+      ],
+      "info":[
+        {
+          "title":"Funding",
+          "rows":[
+            {"col-1":"Bank Account (ACH)"},
+            {"col-1":"Domestic Wire"},
+            {"col-1":"Credit/Debit Card"}
+          ]
+        }
       ]
     },
 
     {
       "ramp":"Transak",
       "type":"Infra | Web Ramp",
-      "way":"ON/OFF",
+      "way":"ON / OFF",
       "links":[
-        {"text":"Website", "url":"https://transak.com/"},
-        {"text":"Web Ramp", "url":"https://global.transak.com/"}
-      ]
-    },
-
-    {
-      "ramp":"UTORG",
-      "type":"Infra | Web Ramp",
-      "way":"ON",
-      "links":[
-        {"text":"Website", "url":"https://utorg.pro/"}
+        {"text":"Web Ramp","url":"https://global.transak.com/"},
+        {"text":"Website","url":"https://transak.com/"},
+        {"text":"Terms of Use","url":"https://transak.com/terms-of-service-us"},
+        {"text":"Privacy Policy","url":"https://transak.com/privacy-policy"}
+      ],
+      "info":[
+        {
+          "title":"Payment Methods",
+          "rows":[
+            {"col-1":"Cash App"},
+            {"col-1":"Venmo"},
+            {"col-1":"Credit/Debit Card"},
+            {"col-1":"ApplePay"},
+            {"col-1":"Google Pay"}
+          ]
+        },
+        {
+          "title":"Withdraw Options",
+          "rows":[
+            {"col-1":"ETH","col-2":"Arbitrum One, Optimism"},
+            {"col-1":"USDC","col-2":"Arbitrum One, Optimism"},
+            {"col-1":"USDS","col-2":"Arbitrum One"},
+            {"col-1":"GMX","col-2":"Arbitrum One"},
+            {"col-1":"IMX","col-2":"Immutable X"}
+          ]
+        }
       ]
     },
 
@@ -562,7 +706,11 @@
       "type":"FinTech",
       "way":"ON",
       "links":[
-        {"text":"Website", "url":"https://www.wirexapp.com/"}
+        {"text":"Website","url":"https://www.wirexapp.com/"},
+        {"text":"Terms of Use","url":"https://wirexapp.com/en-us/legal/terms-and-conditions"},
+        {"text":"Zero Hash Terms of Use","url":"https://wirexapp.com/en-us/legal/zerohash-terms"},
+        {"text":"Privacy Policy","url":"https://wirexapp.com/en-us/legal/privacy-data-retention"},
+        {"text":"Zero Hash Privacy Policy","url":"https://seedcx.zendesk.com/hc/en-us/articles/360009900494-Privacy-Policy-"}
       ]
     },
 
@@ -571,7 +719,27 @@
       "type":"Infra",
       "way":"ON",
       "links":[
-        {"text":"Website", "url":"https://www.sendwyre.com/"}
+        {"text":"Website","url":"https://www.sendwyre.com/"},
+        {"text":"Terms of Use","url":"https://www.sendwyre.com/legal/user-agreement"},
+        {"text":"Privacy Policy","url":"https://www.sendwyre.com/legal/privacy-policy"}
+      ],
+      "info":[
+        {
+          "title":"Payment Methods",
+          "rows":[
+            {"col-1":"Bank Account (ACH)"},
+            {"col-1":"Domestic Wire"},
+            {"col-1":"ApplePay"},
+            {"col-1":"PayPal"}
+          ]
+        },
+        {
+          "title":"Withdraw Options",
+          "rows":[
+            {"col-1":"ETH","col-2":"Loopring"},
+            {"col-1":"USDC","col-2":"Loopring"}
+          ]
+        }
       ]
     }
 

@@ -4,7 +4,12 @@
         {"name":"Bitkub"},
         {"name":"Bybit"},
         {"name":"Coinify"},
+        {"name":"JunoPay","why":"Already included Transak"},
         {"name":"Huobi"},
-        {"name":"OKX"}
+        {"name":"Mt Pelerin"},
+        {"name":"OKX", "why":"Does not serve US Person"},
+        {"name":"Onramper","why":"Agregator"},
+        {"name":"Shapeshift","why":"Agregator"},
+        {"name":"UTORG","why":"Does not serve US Person"}
     ]
 }
