@@ -3,8 +3,7 @@
 //////////////
 
 // Icons vars
-const sunIcon = document.querySelector(".sun");
-const moonIcon = document.querySelector(".moon");
+const darkmodeIcon = document.querySelector(".dark-mode");
 
 // Theme vars
 const userTheme = localStorage.getItem("theme");
@@ -29,12 +28,8 @@ const themeSwitch = () => {
     localStorage.setItem("theme", "dark");
 };
 
-// Call theme switch on clicking buttons
-sunIcon.addEventListener("click", () => {
-    themeSwitch();
-});
-
-moonIcon.addEventListener("click", () => {
+// Call theme switch on clicking button
+darkmodeIcon.addEventListener("click", () => {
     themeSwitch();
 });
 
