@@ -59,9 +59,9 @@
       <div class="flex max-w-screen-lg mx-auto mb-2 px-4 font-bold opacity-70 text-sm text-center">
         <div class="basis-4/12"></div>
         <div class="basis-2/12">Ramp Way</div>
-        <div class="basis-2/12">Minimum KYC</div>
-        <div class="basis-2/12">Ramp < 10min</div>
-        <div class="basis-2/12">Cost < 1%</div>
+        <div class="basis-2/12 mx-4">Trust</div>
+        <div class="basis-2/12 mx-4">Experience</div>
+        <div class="basis-2/12 mx-4">Cost</div>
       </div>
         
       {{!-- Accordion rows loop --}}
@@ -69,16 +69,22 @@
         
         {{!-- Accordion headers --}}
         <div class="accordion max-w-screen-lg mx-auto text-center px-4 py-6 cursor-pointer border-t border-chatura-gray dark:border-kestrel-white hover:bg-chatura-gray dark:hover:bg-fabulous-grape">
-          <div class="flex">
+          <div class="flex items-center">
             <div class="basis-4/12 text-left">
               <img class="inline-block w-4 max-h-4 mr-3" src="../icons/{{ramp}}.png" alt="{{ramp}}">
               <span class="font-bold">{{ramp}}</span>
               <span class="ml-2 italic text-sm opacity-50">{{type}}</span>
             </div>
             <div class="basis-2/12 font-header text-xs">{{way}}</div>
-            <div class="basis-2/12">{{kyc}}</div>
-            <div class="basis-2/12">{{fast-ramp}}</div>
-            <div class="basis-2/12">{{low-cost}}</div>
+            <div class="basis-2/12 mx-4">
+              <div class="bg-gradient-to-r from-pink-200 to-red-300 dark:from-pink-800 dark:to-red-900 w-{{trust}} rounded text-sm">{{trust}}</div>
+            </div>
+            <div class="basis-2/12 mx-4">
+              <div class="bg-gradient-to-r from-sky-200 to-blue-300 dark:from-sky-800 dark:to-blue-900 w-{{exp}} rounded text-sm">{{exp}}</div>
+            </div>
+            <div class="basis-2/12 mx-4">
+              <div class="bg-gradient-to-r from-emerald-200 to-green-300 dark:from-emerald-800 dark:to-green-900 w-{{cost}} rounded text-sm">{{cost}}</div>
+            </div>
           </div>
         </div>
 

@@ -5,10 +5,9 @@
       "ramp":"Alchemy Pay",
       "type":"Infra | Web Ramp",
       "way":"ON",
-      "kyc":"Email, Card info",
-      "fast-ramp":"Yes",
-      "low-cost":"No",
-      "links":[
+      "trust":"80",
+      "exp":"70",
+      "cost":"40",      "links":[
         {"text":"Web Ramp","url":"https://ramp.alchemypay.org/"},
         {"text":"Website","url":"https://alchemypay.org/"},
         {"text":"Terms of Use","url":"https://alchemypay.org/terms-of-use/"},
@@ -59,8 +58,9 @@
       "ramp":"Banxa",
       "type":"Infra | Web Ramp",
       "way":"ON",
-      "kyc":"Email, Name, Address, SSN",
-      "links":[
+      "trust":"100",
+      "exp":"100",
+      "cost":"100",      "links":[
         {"text":"Web Ramp","url":"https://checkout.banxa.com/"},
         {"text":"Website","url":"https://banxa.com/"},
         {"text":"Terms of Use","url":"https://banxa.com/wp-content/uploads/2022/10/Customer-Terms-and-Conditions-1-July-2022.pdf"},
@@ -111,6 +111,9 @@
       "ramp":"Binance.US",
       "type":"CEX",
       "way":"ON / OFF",
+      "trust":"100",
+      "exp":"100",
+      "cost":"100",
       "links":[
         {"text":"Web Ramp","url":"https://www.binance.us/"},
         {"text":"Website","url":"https://www.binance.us/"},
@@ -173,6 +176,9 @@
       "ramp":"Coinbase",
       "type":"CEX | Wallet",
       "way":"ON / OFF",
+      "trust":"100",
+      "exp":"100",
+      "cost":"100",
       "links":[
         {"text":"Website","url":"https://coinbase.com/"},
         {"text":"Terms of Use","url":"https://www.coinbase.com/legal/user_agreement/united_states"},
@@ -240,6 +246,9 @@
     {
       "ramp":"Crypto.com",
       "type":"CEX",
+      "trust":"100",
+      "exp":"100",
+      "cost":"100",
       "links":[
         {"text":"Website","url":"https://crypto.com/us/"},
         {"text":"Terms of Use","url":"https://crypto.com/document/entity_us.pdf"},
@@ -251,6 +260,9 @@
       "ramp":"CryptoRefills",
       "type":"E-Commerce",
       "way":"OFF",
+      "trust":"100",
+      "exp":"100",
+      "cost":"100",
       "links":[
         {"text":"Website","url":"https://www.cryptorefills.com/"},
         {"text":"Terms of Use","url":"https://www.cryptorefills.com/blog/terms-and-conditions/"},
@@ -303,6 +315,9 @@
     {
       "ramp":"Fluid Finance",
       "type":"FinTech",
+      "trust":"100",
+      "exp":"100",
+      "cost":"100",
       "links":[
         {"text":"Website","url":"https://fluid.ch/"},
         {"text":"Terms of Use","url":"https://fluid.ch/terms-conditions/"},
@@ -314,6 +329,9 @@
       "ramp":"Juno",
       "type":"FinTech",
       "way":"ON / OFF",
+      "trust":"100",
+      "exp":"100",
+      "cost":"100",
       "links":[
         {"text":"Web Ramp","url":"https://juno.finance/pay"},
         {"text":"Website","url":"https://juno.finance/"},
@@ -357,6 +375,9 @@
       "ramp":"KuCoin",
       "type":"CEX",
       "way":"ON",
+      "trust":"100",
+      "exp":"100",
+      "cost":"100",
       "links":[
         {"text":"Web Ramp","url":"https://www.kucoin.com/express"},
         {"text":"Website","url":"https://www.kucoin.com/"},
@@ -410,6 +431,9 @@
       "ramp":"Layerswap",
       "type":"Ramp",
       "way":"ON / OFF",
+      "trust":"100",
+      "exp":"100",
+      "cost":"100",
       "links":[
         {"text":"Website","url":"https://www.layerswap.io/"},
         {"text":"Terms of Use","url":"https://docs.layerswap.io/user-docs/information/terms-of-services"},
@@ -456,6 +480,9 @@
       "ramp":"Mercuryo",
       "type":"Infra | Web Ramp | Wallet",
       "way":"ON",
+      "trust":"100",
+      "exp":"100",
+      "cost":"100",
       "links":[
         {"text":"Web Ramp","url":"https://exchange.mercuryo.io/"},
         {"text":"Website","url":"https://mercuryo.io/"},
@@ -468,6 +495,9 @@
       "ramp":"Moonpay",
       "type":"Infra | Web Ramp",
       "way":"ON",
+      "trust":"100",
+      "exp":"100",
+      "cost":"100",
       "links":[
         {"text":"Web Ramp","url":"https://www.moonpay.com/buy"},
         {"text":"Website","url":"https://www.moonpay.com/"},
@@ -515,6 +545,9 @@
       "ramp":"OkCoin",
       "type":"CEX",
       "way":"ON / OFF",
+      "trust":"100",
+      "exp":"100",
+      "cost":"100",
       "links":[
         {"text":"Website","url":"https://www.okcoin.com/"},
         {"text":"Terms of Use","url":"https://support.okcoin.com/hc/en-us/articles/360059514492-Terms-of-Service"},
@@ -573,6 +606,9 @@
       "ramp":"Ramp",
       "type":"Infra | Web Ramp",
       "way":"ON / OFF",
+      "trust":"100",
+      "exp":"100",
+      "cost":"100",
       "links":[
         {"text":"Web Ramp","url":"https://ramp.network/buy/"},
         {"text":"Website","url":"https://ramp.network/"},
@@ -624,6 +660,9 @@
       "ramp":"Simplex",
       "type":"Infra | Web Ramp",
       "way":"ON",
+      "trust":"100",
+      "exp":"100",
+      "cost":"100",
       "links":[
         {"text":"Web Ramp","url":"https://buy.chainbits.com/"},
         {"text":"Website","url":"https://www.simplex.com/"},
@@ -651,6 +690,9 @@
       "ramp":"Swype",
       "type":"FinTech",
       "way":"ON",
+      "trust":"100",
+      "exp":"100",
+      "cost":"100",
       "links":[
         {"text":"Website","url":"https://www.swype.com/"},
         {"text":"Terms of Use and Privacy Policy","url":"https://www.swype.com/terms-of-use"}
@@ -671,6 +713,9 @@
       "ramp":"Transak",
       "type":"Infra | Web Ramp",
       "way":"ON / OFF",
+      "trust":"100",
+      "exp":"100",
+      "cost":"100",
       "links":[
         {"text":"Web Ramp","url":"https://global.transak.com/"},
         {"text":"Website","url":"https://transak.com/"},
@@ -705,6 +750,9 @@
       "ramp":"Wirex",
       "type":"FinTech",
       "way":"ON",
+      "trust":"100",
+      "exp":"100",
+      "cost":"100",
       "links":[
         {"text":"Website","url":"https://www.wirexapp.com/"},
         {"text":"Terms of Use","url":"https://wirexapp.com/en-us/legal/terms-and-conditions"},
@@ -718,6 +766,9 @@
       "ramp":"Wyre",
       "type":"Infra",
       "way":"ON",
+      "trust":"100",
+      "exp":"100",
+      "cost":"100",
       "links":[
         {"text":"Website","url":"https://www.sendwyre.com/"},
         {"text":"Terms of Use","url":"https://www.sendwyre.com/legal/user-agreement"},
