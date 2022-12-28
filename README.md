@@ -1,6 +1,6 @@
 # **L2 Ramps**
 An open source web page to list and compare on/off ramp providers that support Ethereum Layer 2s.
-The United States version is maintained by [otavio.eth](https://twitter.com/otavio_eth) and can be found at [l2ramps.web.app](htpps://l2ramps.web.app/)
+The United States version is maintained by [otavio.eth](https://twitter.com/otavio_eth) and can be found at [l2ramps.web.app](https://l2ramps.web.app/)
 
 ### **Mission**
 This site aim to help users reduce costs, comprehend risks, and avoid unnecessary KYCs by going directly to the right service for their needs. 
@@ -15,10 +15,10 @@ The work on all these fronts are going to happen in parallel. This way I do not 
 _Feeding the website with reliable data_
 * ~~Create a static website with file based database~~ - Done
 * ~~Find the L2 ramps currently available for US persons~~ - Done
-* Improve card layout and include legend - 50% done - Dec/22
+* Improve card layout and include legend - 60% done - Dec/22
 * ~~List ramps with icons~~ - Done
-* Check and list the terms of services of each ramp - 80% done - Dec/22
-* Check and list the privacy police of each ramp - 80% - Dec/22
+* Check and list the terms of services of each ramp - 90% done - Dec/22
+* Check and list the privacy police of each ramp - 90% - Dec/22
 * Check and list funding methods of each ramp - Dec/22
 * Check and list purchase options of each ramp - Dec/22
 * Check and list withdraw options of each ramp - Dec/22
