@@ -21,25 +21,23 @@
         {{!-- Top row --}}
         <div class="flex pt-4 mx-4">
           {{!-- Left dropdown menu --}}
-          <div class="dropdown flex-none px-2 py-1 text-left border">
-            <span class="align-middle">{{version}}<i class='bx bxs-chevron-down cursor-pointer align-middle pl-1'></i></span>
+          <div class="dropdown px-2 py-1 text-left text-sm border">
+            <span>{{version}}<i class='bx bxs-chevron-down text-sm pl-1'></i></span>
             <div class="dropdown-content">
               {{#each this.forks}}
-                <p class="w-max mt-1 p-2 border">
-                  <a href="{{link}}" class="hover:opacity-70">{{country}}</a>
-                </p>
+                  <a href="{{link}}" class="w-max mt-1 px-2 py-1 border hover:opacity-60">{{country}}</a>
               {{/each}}
             </div>
           </div>
 
           <!-- Right icons: dark mode toggle and github button -->
           <div class="flex-auto"></div>
-          <div class="flex-none p-2 border dark-mode cursor-pointer">
-            <i class="bx bxs-sun"></i>
-            <i class="bx bx-moon"></i>      
+          <div class="flex-none px-2 py-1 border dark-mode cursor-pointer hover:opacity-60">
+            <i class="bx bxs-sun text-sm"></i>
+            <i class="bx bx-moon text-sm"></i>      
           </div>
-          <a href="{{repo}}" target="_blank" class="flex-none ml-3 p-2 border border-accent">
-            <i class='bx bxl-github'></i>
+          <a href="{{repo}}" target="_blank" class="flex-none ml-3 px-2 py-1 border cursor-pointer hover:opacity-60">
+            <i class='bx bxl-github text-sm'></i>
           </a>
         </div>
 
@@ -53,79 +51,112 @@
     {{/with}}
 
     <!-- ACCORDION -->
-    <div class="py-24 text-left bg-pure-white text-black-magic dark:bg-mineral-gray dark:text-pure-white">
+    <div class="bg-pure-white text-black-magic dark:bg-black-magic  dark:text-pure-white">
+      <div class="max-w-screen-lg mx-auto py-24 px-8 text-left">
 
-      {{!-- Header over accordion --}}
-      <div class="flex max-w-screen-lg mx-auto mb-2 px-4 font-bold opacity-70 text-sm text-center">
-        <div class="basis-4/12"></div>
-        <div class="basis-2/12">Ramp Way</div>
-        <div class="basis-2/12 mx-4">Trust</div>
-        <div class="basis-2/12 mx-4">Experience</div>
-        <div class="basis-2/12 mx-4">Cost</div>
-      </div>
-        
-      {{!-- Accordion rows loop --}}
-      {{#each main.ramps}}
-        
-        {{!-- Accordion headers --}}
-        <div class="accordion max-w-screen-lg mx-auto text-center px-4 py-6 cursor-pointer border-t border-chatura-gray dark:border-kestrel-white hover:bg-chatura-gray dark:hover:bg-fabulous-grape">
-          <div class="flex items-center">
-            <div class="basis-4/12 text-left">
-              <img class="inline-block w-4 max-h-4 mr-3" src="../icons/{{ramp}}.png" alt="{{ramp}}">
-              <span class="font-bold">{{ramp}}</span>
-              <span class="ml-2 italic text-sm opacity-50">{{type}}</span>
-            </div>
-            <div class="basis-2/12 font-header text-xs">{{way}}</div>
-            <div class="basis-2/12 mx-4">
-              <div class="bg-gradient-to-r from-pink-200 to-red-300 dark:from-pink-800 dark:to-red-900 w-{{trust}} rounded text-sm">{{trust}}</div>
-            </div>
-            <div class="basis-2/12 mx-4">
-              <div class="bg-gradient-to-r from-sky-200 to-blue-300 dark:from-sky-800 dark:to-blue-900 w-{{exp}} rounded text-sm">{{exp}}</div>
-            </div>
-            <div class="basis-2/12 mx-4">
-              <div class="bg-gradient-to-r from-emerald-200 to-green-300 dark:from-emerald-800 dark:to-green-900 w-{{cost}} rounded text-sm">{{cost}}</div>
+        {{!-- Header over accordion --}}
+        <div class="flex mb-2 px-4 font-bold opacity-70 text-sm text-center">
+          <div class="basis-4/12"></div>
+          <div class="basis-2/12">Ramp Way</div>
+          <div class="basis-2/12 mx-4">Trust</div>
+          <div class="basis-2/12 mx-4">Easy of Use</div>
+          <div class="basis-2/12 mx-4">Cost</div>
+        </div>
+          
+        {{!-- Accordion rows loop --}}
+        {{#each main.ramps}}
+          
+          {{!-- Accordion headers --}}
+          <div class="accordion text-center px-4 py-6 cursor-pointer border-t border-chatura-gray dark:border-kestrel-white hover:bg-chatura-gray dark:hover:bg-fabulous-grape">
+            <div class="flex items-center">
+              <div class="basis-4/12 text-left">
+                <img class="inline-block w-4 max-h-4 mr-3" src="../icons/{{ramp}}.png" alt="{{ramp}}">
+                <span class="font-bold">{{ramp}}</span>
+                <span class="ml-2 italic text-sm opacity-50">{{type}}</span>
+              </div>
+              <div class="basis-2/12 font-header text-xs">{{way}}</div>
+              <div class="basis-2/12 mx-4">
+                <div class="bg-gradient-to-r from-pink-200 to-red-300 dark:from-pink-800 dark:to-red-900 w-{{trust}} rounded text-sm">{{trust}}</div>
+              </div>
+              <div class="basis-2/12 mx-4">
+                <div class="bg-gradient-to-r from-sky-200 to-blue-300 dark:from-sky-800 dark:to-blue-900 w-{{exp}} rounded text-sm">{{exp}}</div>
+              </div>
+              <div class="basis-2/12 mx-4">
+                <div class="bg-gradient-to-r from-emerald-200 to-green-300 dark:from-emerald-800 dark:to-green-900 w-{{cost}} rounded text-sm">{{cost}}</div>
+              </div>
             </div>
           </div>
-        </div>
 
-        {{!-- Accordion content --}}
-        <div class="panel max-w-screen-lg mx-auto p-8 bg-kestrel-white dark:bg-mount-etna">
+          {{!-- Accordion content --}}
+          <div class="panel p-8 bg-kestrel-white dark:bg-mount-etna">
 
-          {{!-- Links --}}
-          {{#each this.links}}
-            <a href="{{url}}" target="_blank" class="p-2 mr-4 text-sm text-reddened-earth dark:text-kestrel-white border border-reddened-earth dark:border-kestrel-white hover:opacity-70">{{text}}<i class='bx bx-link-external ml-1'></i></a>
-          {{/each}}
+            {{!-- Links --}}
+            {{#each this.links}}
+              <a href="{{url}}" target="_blank" class="p-2 mr-4 text-sm text-reddened-earth dark:text-kestrel-white border border-reddened-earth dark:border-kestrel-white hover:opacity-70">{{text}}<i class='bx bx-link-external ml-1'></i></a>
+            {{/each}}
 
-          {{!-- Info sub-section --}}
-          {{#each this.info}}
-            <div class="grid grid-cols-3 gap-x-4 gap-y-1 mt-8">
-              <span class="col-span-3 font-bold text-reddened-earth dark:text-kestrel-white">{{title}}</span>
-              {{#each this.rows}}
-                <span>{{col-1}}
-                  <span class="wrapper inline-block">
-                    <i class="bx bx-help-circle ml-1"></i>
-                    <span class="tooltip empty:hidden text-xs z-10">{{col-1-tooltip}}</span>
+            {{!-- Info sub-section --}}
+            {{#each this.info}}
+              <div class="grid grid-cols-3 gap-x-4 gap-y-1 mt-8">
+                <span class="col-span-3 font-bold text-reddened-earth dark:text-kestrel-white">{{title}}</span>
+                {{#each this.rows}}
+                  <span>{{col-1}}
+                    <span class="wrapper inline-block">
+                      <i class="bx bx-help-circle ml-1"></i>
+                      <span class="tooltip empty:hidden text-xs z-10">{{col-1-tooltip}}</span>
+                    </span>
                   </span>
-                </span>
-                <span>{{col-2}}
-                  <span class="wrapper inline-block">
-                    <i class="bx bx-help-circle ml-1"></i>
-                    <span class="tooltip empty:hidden text-xs z-10">{{col-2-tooltip}}</span>
+                  <span>{{col-2}}
+                    <span class="wrapper inline-block">
+                      <i class="bx bx-help-circle ml-1"></i>
+                      <span class="tooltip empty:hidden text-xs z-10">{{col-2-tooltip}}</span>
+                    </span>
                   </span>
-                </span>
-                <span>{{col-3}}
-                  <span class="wrapper inline-block">
-                    <i class="bx bx-help-circle ml-1"></i>
-                    <span class="tooltip empty:hidden text-xs z-10">{{col-3-tooltip}}</span>
+                  <span>{{col-3}}
+                    <span class="wrapper inline-block">
+                      <i class="bx bx-help-circle ml-1"></i>
+                      <span class="tooltip empty:hidden text-xs z-10">{{col-3-tooltip}}</span>
+                    </span>
                   </span>
-                </span>
-              {{/each}}
-            </div>
-          {{/each}}
-          
-        </div>
+                {{/each}}
+              </div>
+            {{/each}}
 
-      {{/each}}
+          </div>
+
+        {{/each}}
+
+      </div>
+
+    </div>
+
+    <div class="bg-kestrel-white text-black-magic dark:bg-mount-etna dark:text-pure-white">
+      <div class="max-w-screen-lg mx-auto py-24 px-8 text-left">
+        <p class="font-header text-4xl text-center mb-8">Methodology</p>
+
+        <p class="text-3xl mt-12 mb-4">Trust<span class="text-base opacity-40 ml-2">scoring</span></p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure expedita nam blanditiis, aut perferendis ab harum animi ad dolorum amet, eaque eveniet praesentium, cumque labore aspernatur repudiandae accusamus? Corrupti, dolore?</p>
+
+        <p class="text-3xl mt-12 mb-4">Easy of Use<span class="text-base opacity-40 ml-2">scoring</span></p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure expedita nam blanditiis, aut perferendis ab harum animi ad dolorum amet, eaque eveniet praesentium, cumque labore aspernatur repudiandae accusamus? Corrupti, dolore?</p>
+
+        <p class="text-3xl mt-12 mb-4">Cost<span class="text-base opacity-40 ml-2">scoring</span></p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure expedita nam blanditiis, aut perferendis ab harum animi ad dolorum amet, eaque eveniet praesentium, cumque labore aspernatur repudiandae accusamus? Corrupti, dolore?</p>
+
+        <p class="text-3xl mt-12 mb-4">Ramps<span class="text-base opacity-40 ml-2">filtering and sorting</span></p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure expedita nam blanditiis, aut perferendis ab harum animi ad dolorum amet, eaque eveniet praesentium, cumque labore aspernatur repudiandae accusamus? Corrupti, dolore?</p>
+
+        <p class="text-3xl mt-12 mb-4">Layer 2s<span class="text-base opacity-40 ml-2">filtering and sorting</span></p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure expedita nam blanditiis, aut perferendis ab harum animi ad dolorum amet, eaque eveniet praesentium, cumque labore aspernatur repudiandae accusamus? Corrupti, dolore?</p>
+
+        <p class="text-3xl mt-12 mb-4">Tokens<span class="text-base opacity-40 ml-2">filtering and sorting</span></p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure expedita nam blanditiis, aut perferendis ab harum animi ad dolorum amet, eaque eveniet praesentium, cumque labore aspernatur repudiandae accusamus? Corrupti, dolore?</p>
+
+        <p class="text-3xl mt-12 mb-4">Payment Methods<span class="text-base opacity-40 ml-2">sorting</span></p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure expedita nam blanditiis, aut perferendis ab harum animi ad dolorum amet, eaque eveniet praesentium, cumque labore aspernatur repudiandae accusamus? Corrupti, dolore?</p>
+
+      </div>
+
     </div>
 
     <script src="./app.js"></script>
