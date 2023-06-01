@@ -16,6 +16,9 @@
 .dropdown:hover .dropdown-content {
   display: block;
 }
+.grid-auto {
+  grid: none;
+}
 
 
 /*  */
@@ -34,9 +37,9 @@
   text-align: center;
   display: block;
   left: -64px;
-  margin-bottom: 15px;
+  margin-bottom: 1 1rem;
   opacity: 0;
-  padding: 10px 5px;
+  padding: 10px  1rem;
   pointer-events: none;
   position: absolute;
   width: 10rem;
@@ -141,3 +144,30 @@
 .w-90 {width:90%}
 .w-95 {width:95%}
 .w-100 {width:100%}
+
+
+/*  */
+/* TABLES */
+/*  */
+table {
+  border:1px solid;
+  padding: 1rem;
+}
+table th {
+  border:1px solid;
+  padding: 1rem;
+}
+table td {
+  border:1px solid;
+  padding: 1rem;
+}
+
+/*  */
+/* LISTS */
+/*  */
+ul {
+  padding-left: 2rem;
+}
+li {
+  padding-top: 0.5rem;
+}

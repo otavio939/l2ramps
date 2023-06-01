@@ -4,10 +4,12 @@
     {
       "ramp":"Alchemy Pay",
       "type":"Infra | Web Ramp",
+      "jurisdiction":"Lithuania",
       "way":"ON",
-      "trust":"80",
-      "exp":"70",
-      "cost":"40",      "links":[
+      "trust":"100",
+      "exp":"100",
+      "cost":"100",
+      "links":[
         {"text":"Web Ramp","url":"https://ramp.alchemypay.org/"},
         {"text":"Website","url":"https://alchemypay.org/"},
         {"text":"Terms of Use","url":"https://alchemypay.org/terms-of-use/"},
@@ -15,19 +17,20 @@
       ],
       "info":[
         {
+          "title":"Summary",
+          "rows":[
+            {"col-1":"Likely a good option for Binance.com (not available in US) due to the support to Binance Pay."},
+            {"col-1":"Card payment fee for US users are too high."}
+          ]
+        },
+        {
           "title":"Payment Methods",
           "rows":[
             {
               "col-1":"Credit/Debit Card",
               "col-2":"Minutes",
               "col-3":"4%",
-              "col-3-tooltip":"Benchmarked for purchase of USDC with 1000USD on 11/27/22"
-            },
-            {
-              "col-1":"Binance Pay",
-              "col-2":"Minutes",
-              "col-3":"0.81%",
-              "col-3-tooltip":"Benchmarked for purchase of USDC with 1000USD on 11/27/22"
+              "col-3-tooltip":"Quoted on 11/27/2022 for a purchase of 1000USD worth of USDC on Arbitrum"
             }
           ]
         },
@@ -36,17 +39,17 @@
           "rows":[
             {
               "col-1":"ETH",
-              "col-2":"Arbitrum One",
+              "col-2":"Arbitrum",
               "col-3":"Network fee"
             },
             {
               "col-1":"USDC",
-              "col-2":"Arbitrum One",
+              "col-2":"Arbitrum",
               "col-3":"Network fee"
             },
             {
               "col-1":"USDT",
-              "col-2":"Arbitrum One",
+              "col-2":"Arbitrum",
               "col-3":"Network fee"
             }
           ]
@@ -161,11 +164,13 @@
           "rows":[
             {
               "col-1":"ETH",
-              "col-2":"Arbitrum One, Optimism"
+              "col-2":"Arbitrum, Optimism",
+              "col-3":"Free"
             },
             {
               "col-1":"OP",
-              "col-2":"Optimism"
+              "col-2":"Optimism",
+              "col-3":"0.5 OP"
             }
           ]
         }
@@ -190,6 +195,17 @@
           "title":"Funding",
           "rows":[
             {
+              "col-1":"Bank Account (ACH)",
+              "col-2":"3-5 business days",
+              "col-3":"Free"
+            },
+            {
+              "col-1":"PayPal",
+              "col-2":"Minutes",
+              "col-3":"3.837%",
+              "col-3-tooltip":"From quote created on 2022/01/08-16:20 for a purchase of $1000 of USDC using PayPal."
+            },
+            {
               "col-1":"ApplePay",
               "col-2":"Minutes"
             },
@@ -201,12 +217,7 @@
               "col-1":"Debit Card",
               "col-2":"Minutes",
               "col-3":"3.837%",
-              "col-3-tooltip":"From order preview created on 12/19/2022-14:50 for a purchase of $1000 of USDC using a MasterCard debit card. Coinbase does not disclosure this fee."
-            },
-            {
-              "col-1":"Bank Account (ACH)",
-              "col-2":"3-5 business days",
-              "col-3":"Free"
+              "col-3-tooltip":"From quote created on 12/19/2022-14:50 for a purchase of $1000 of USDC using a MasterCard debit card."
             },
             {
               "col-1":"Domestic Wire",
@@ -235,6 +246,11 @@
           "title":"Withdraw Options",
           "rows":[
             {
+              "col-1":"ETH",
+              "col-2":"Optimism",
+              "col-2-tooltip":"Option available on mobile app only"
+            },
+            {
               "col-1":"OP",
               "col-2":"Optimism"
             }
@@ -246,13 +262,35 @@
     {
       "ramp":"Crypto.com",
       "type":"CEX",
+      "way":"ON / OFF",
       "trust":"100",
       "exp":"100",
       "cost":"100",
       "links":[
         {"text":"Website","url":"https://crypto.com/us/"},
         {"text":"Terms of Use","url":"https://crypto.com/document/entity_us.pdf"},
-        {"text":"Privacy Policy","url":"https://crypto.com/privacy/privacy_us.pdf"}
+        {"text":"Privacy Policy","url":"https://crypto.com/privacy/privacy_us.pdf"},
+        {"text":"Fees","url":"https://crypto.com/exchange/document/fees-limits"}
+      ],
+      "info":[
+        {
+          "title":"Payment Methods",
+          "rows":[
+            {"col-1":"Bank Account (ACH)","col-2":"Free"},
+            {"col-1":"Credit/Debit Card","col-2":"2.99%","col-2-tooltip":"Free in the 1st week for volatile tokens"}
+          ]
+        },
+        {
+          "title":"Withdraw Options",
+          "rows":[
+            {"col-1":"ETH","col-2":"Arbitrum","col-3":"0.001 ETH"},
+            {"col-1":"ETH","col-2":"Optimism","col-3":"0.0004 ETH"},
+            {"col-1":"USDC","col-2":"Arbitrum","col-3":"1 USDC"},
+            {"col-1":"GMX","col-2":"Arbitrum","col-3":"0.01 GMX"},
+            {"col-1":"MAGIC","col-2":"Arbitrum","col-3":"0.95 MAGIC"},
+            {"col-1":"OP","col-2":"Optimism","col-3":"0.75 OP"}
+          ]
+        }
       ]
     },
 
@@ -274,27 +312,27 @@
           "rows":[
             {
               "col-1":"MIM",
-              "col-2":"Arbitrum One",
+              "col-2":"Arbitrum",
               "col-3":"Network fee"
             },
             {
               "col-1":"FRAX",
-              "col-2":"Arbitrum One",
+              "col-2":"Arbitrum",
               "col-3":"Network fee"
             },
             {
               "col-1":"DAI",
-              "col-2":"Arbitrum One",
+              "col-2":"Arbitrum",
               "col-3":"Network fee"
             },
             {
               "col-1":"USDC",
-              "col-2":"Arbitrum One",
+              "col-2":"Arbitrum",
               "col-3":"Network fee"
             },
             {
               "col-1":"USDT",
-              "col-2":"Arbitrum One",
+              "col-2":"Arbitrum",
               "col-3":"Network fee"  
             }
           ]
@@ -304,7 +342,7 @@
           "rows":[
             {
               "col-1":"Hundreds of gift cards available",
-              "col-2":"As soon as payment is confirmed",
+              "col-2":"Minutes",
               "col-3":"No service fee"
             }
           ]
@@ -315,6 +353,7 @@
     {
       "ramp":"Fluid Finance",
       "type":"FinTech",
+      "way":"ON / OFF",
       "trust":"100",
       "exp":"100",
       "cost":"100",
@@ -322,6 +361,22 @@
         {"text":"Website","url":"https://fluid.ch/"},
         {"text":"Terms of Use","url":"https://fluid.ch/terms-conditions/"},
         {"text":"Privacy Policy","url":"https://fluid.ch/privacy-policy/"}
+      ],
+      "info":[
+        {
+          "title":"Funding",
+          "rows":[
+            {"col-1":"SWIFT"}
+          ]
+        },
+        {
+          "title":"Withdraw Options",
+          "rows":[
+            {"col-1":"ETH","col-2":"Arbitrum"},
+            {"col-1":"VST, DAI, USDC, USDT","col-2":"Arbitrum"},
+            {"col-1":"GMX, VSTA","col-2":"Arbitrum"}
+          ]
+        }
       ]
     },
 
@@ -360,11 +415,11 @@
           "rows":[
             {
               "col-1":"ETH",
-              "col-2":"Arbitrum One, Optimism"
+              "col-2":"Arbitrum, Optimism"
             },
             {
               "col-1":"USDC",
-              "col-2":"Arbitrum One, Optimism"
+              "col-2":"Arbitrum, Optimism"
             }
           ]
         }
@@ -374,7 +429,7 @@
     {
       "ramp":"KuCoin",
       "type":"CEX",
-      "way":"ON",
+      "way":"ON / OFF",
       "trust":"100",
       "exp":"100",
       "cost":"100",
@@ -386,12 +441,24 @@
       ],
       "info":[
         {
+          "title":"Fast Trade",
+          "rows":[
+            {"col-1":"Bank Transfer (ACH or SWIFT) via Legend Trading","col-2":"1.50%"}
+          ]
+        },
+        {
           "title":"Funding",
           "rows":[
             {"col-1":"Bank Account (ACH)"},
             {"col-1":"Wire Transfer"},
             {"col-1":"ApplePay"},
-            {"col-1":"Visa/Mastercard"}
+            {"col-1":"Visa/Mastercard","col-2":"3.80%"}
+          ]
+        },
+        {
+          "title":"Trading",
+          "rows":[
+            {"col-1":"Market trade","col-2":"0.1%","col-2-tooltip":"Taker fee at lowest tier"}
           ]
         },
         {
@@ -399,27 +466,27 @@
           "rows":[
             {
               "col-1":"ETH",
-              "col-2":"Arbitrum One, Optimism",
+              "col-2":"Arbitrum, Optimism",
               "col-3":"0.001 ETH"
             },
             {
               "col-1":"USDC",
-              "col-2":"Arbitrum One, Optimism",
+              "col-2":"Arbitrum, Optimism",
               "col-3":"3 USDC"
             },
             {
               "col-1":"USDT",
-              "col-2":"Arbitrum One, Optimism",
+              "col-2":"Arbitrum, Optimism",
               "col-3":"3 USDT"
             },
             {
               "col-1":"AAVE",
-              "col-2":"Arbitrum One",
+              "col-2":"Arbitrum",
               "col-3":"0.001 AAVE"
             },
             {
               "col-1":"YFI",
-              "col-2":"Arbitrum One",
+              "col-2":"Arbitrum",
               "col-3":"0.0001 YFI"
             }
           ]
@@ -453,7 +520,9 @@
           "rows":[
             {
               "col-1":"ETH",
-              "col-2":"Arbitrum One, Arbitrum Nova, Boba, ImmutableX, Loopring, Optimism, Starknet, ZKSpace, ZkSync"
+              "col-2":"Arbitrum, Arbitrum Nova, Boba, ImmutableX, Loopring, Optimism, Starknet, ZKSpace, ZkSync",
+              "col-3":"0.95%",
+              "col-3-tooltip":"From quote created on 2022/01/08-23:24 for a purchase of $1000 of USDC on Arbitrum using Kraken."
             },
             {
               "col-1":"USDC", 
@@ -477,21 +546,6 @@
     },
 
     {
-      "ramp":"Mercuryo",
-      "type":"Infra | Web Ramp | Wallet",
-      "way":"ON",
-      "trust":"100",
-      "exp":"100",
-      "cost":"100",
-      "links":[
-        {"text":"Web Ramp","url":"https://exchange.mercuryo.io/"},
-        {"text":"Website","url":"https://mercuryo.io/"},
-        {"text":"Terms of Use","url":"https://mercuryo.io/legal/terms/"},
-        {"text":"Privacy Policy","url":"https://mercuryo.io/legal/privacy/"}
-      ]
-    },
-
-    {
       "ramp":"Moonpay",
       "type":"Infra | Web Ramp",
       "way":"ON",
@@ -499,12 +553,25 @@
       "exp":"100",
       "cost":"100",
       "links":[
-        {"text":"Web Ramp","url":"https://www.moonpay.com/buy"},
+        {"text":"Moonpay's Web Ramp","url":"https://www.moonpay.com/buy"},
+        {"text":"Onramper's Web Ramp","url":"https://onramper.com/"},
         {"text":"Website","url":"https://www.moonpay.com/"},
         {"text":"Terms of Use","url":"https://www.moonpay.com/legal/terms_of_use_usa"},
         {"text":"Privacy Policy","url":"https://www.moonpay.com/legal/privacy_policy"}
       ],
       "info":[
+        {
+          "title":"Summary",
+          "rows":[
+            {"col-1":"Provider seems focused on integrations to NFT marketplaces and wallets. That can be noticed with the fact that their own web ramp is more limited than the integrations using their own rails. Users should limit the use of this kind of ramp due to unavoidable credit card fees."}
+          ]
+        },
+        {
+          "title":"Payment Methods",
+          "rows":[
+            {"col-1":"Credit Card","col-2":"4.236%","col-2-tooltip":"From quote on 2023/01/09-09:30 for purchase of 1000USD of USDC/DAI on Arbitrum/ZKSync"}
+          ]
+        },
         {
           "title":"Withdraw Options",
           "rows":[
@@ -534,7 +601,7 @@
             },
             {
               "col-1":"MAGIC",
-              "col-2":"Arbitrum One"
+              "col-2":"Arbitrum"
             }
           ]
         }
@@ -589,7 +656,7 @@
           "rows":[
             {
               "col-1":"MAGIC",
-              "col-2":"Arbitrum One",
+              "col-2":"Arbitrum",
               "col-3":"Network fee"
             },
             {
@@ -673,13 +740,13 @@
         {
           "title":"Payment Methods",
           "rows":[
-            {"col-1":"Credit/Debit Card","col-2":"15.81%","col-2-tooltip":"From order preview created on 12/19/2022-15:22 for a purchase of $1000 of ETH on Arbitrum One using a VISA debit card. The website does not breakdown the amount your paying for the token and fees"}
+            {"col-1":"Credit/Debit Card","col-2":"15.81%","col-2-tooltip":"From order preview created on 12/19/2022-15:22 for a purchase of $1000 of ETH on Arbitrum using a VISA debit card. The website does not breakdown the amount your paying for the token and fees"}
           ]
         },
         {
           "title":"Withdraw Options",
           "rows":[
-            {"col-1":"ETH","col-2":"Arbitrum One, Optimism"},
+            {"col-1":"ETH","col-2":"Arbitrum, Optimism"},
             {"col-1":"OP","col-2":"Optimism"}
           ]
         }
@@ -712,7 +779,7 @@
     {
       "ramp":"Transak",
       "type":"Infra | Web Ramp",
-      "way":"ON / OFF",
+      "way":"ON",
       "trust":"100",
       "exp":"100",
       "cost":"100",
@@ -726,20 +793,20 @@
         {
           "title":"Payment Methods",
           "rows":[
-            {"col-1":"Cash App"},
-            {"col-1":"Venmo"},
-            {"col-1":"Credit/Debit Card"},
-            {"col-1":"ApplePay"},
-            {"col-1":"Google Pay"}
+            {"col-1":"Cash App","col-2":"0.95%"},
+            {"col-1":"Venmo","col-2":"0.95%"},
+            {"col-1":"Credit/Debit Card","col-2":"3.99%"},
+            {"col-1":"ApplePay","col-2":"3.99%"},
+            {"col-1":"Google Pay","col-2":"3.99%"}
           ]
         },
         {
           "title":"Withdraw Options",
           "rows":[
-            {"col-1":"ETH","col-2":"Arbitrum One, Optimism"},
-            {"col-1":"USDC","col-2":"Arbitrum One, Optimism"},
-            {"col-1":"USDS","col-2":"Arbitrum One"},
-            {"col-1":"GMX","col-2":"Arbitrum One"},
+            {"col-1":"ETH","col-2":"Arbitrum, Optimism"},
+            {"col-1":"USDC","col-2":"Arbitrum, Optimism"},
+            {"col-1":"USDS","col-2":"Arbitrum"},
+            {"col-1":"GMX","col-2":"Arbitrum"},
             {"col-1":"IMX","col-2":"Immutable X"}
           ]
         }
@@ -756,8 +823,8 @@
       "links":[
         {"text":"Website","url":"https://www.wirexapp.com/"},
         {"text":"Terms of Use","url":"https://wirexapp.com/en-us/legal/terms-and-conditions"},
-        {"text":"Zero Hash Terms of Use","url":"https://wirexapp.com/en-us/legal/zerohash-terms"},
         {"text":"Privacy Policy","url":"https://wirexapp.com/en-us/legal/privacy-data-retention"},
+        {"text":"Zero Hash Terms of Use","url":"https://wirexapp.com/en-us/legal/zerohash-terms"},
         {"text":"Zero Hash Privacy Policy","url":"https://seedcx.zendesk.com/hc/en-us/articles/360009900494-Privacy-Policy-"}
       ]
     },

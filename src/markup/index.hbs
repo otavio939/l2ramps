@@ -1,57 +1,13 @@
-<!doctype html>
-<html>
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L2 Ramps</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg">
-    <link rel="icon" type="image/png" href="../favicon/favicon.png">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Monoton&family=Rubik:wght@400;700&display=swap">
-    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
-  </head>
+{{#extend "layout"}}
 
-  <body class="min-h-screen min-w-full font-body text-center">
-    
+  {{#content "body"}}
+
     <!-- HEADER -->
-    {{#with header}}
-      <div class="bg-chatura-gray dark:bg-fabulous-grape text-pure-white border-pure-white">
-
-        {{!-- Top row --}}
-        <div class="flex pt-4 mx-4">
-          {{!-- Left dropdown menu --}}
-          <div class="dropdown px-2 py-1 text-left text-sm border">
-            <span>{{version}}<i class='bx bxs-chevron-down text-sm pl-1'></i></span>
-            <div class="dropdown-content">
-              {{#each this.forks}}
-                  <a href="{{link}}" class="w-max mt-1 px-2 py-1 border hover:opacity-60">{{country}}</a>
-              {{/each}}
-            </div>
-          </div>
-
-          <!-- Right icons: dark mode toggle and github button -->
-          <div class="flex-auto"></div>
-          <div class="flex-none px-2 py-1 border dark-mode cursor-pointer hover:opacity-60">
-            <i class="bx bxs-sun text-sm"></i>
-            <i class="bx bx-moon text-sm"></i>      
-          </div>
-          <a href="{{repo}}" target="_blank" class="flex-none ml-3 px-2 py-1 border cursor-pointer hover:opacity-60">
-            <i class='bx bxl-github text-sm'></i>
-          </a>
-        </div>
-
-        <!-- Title and subtitle -->
-        <div class="mt-16 pb-24">
-          <p class="text-6xl font-header mb-4">{{title}}</p>
-          <p class="text-xl">{{subtitle}}</p>
-        </div>
-
-      </div>
-    {{/with}}
+    {{#extend "header"}}{{/extend}}
 
     <!-- ACCORDION -->
-    <div class="bg-pure-white text-black-magic dark:bg-black-magic  dark:text-pure-white">
+    <div class="bg-pure-white text-black-magic dark:bg-black-magic dark:text-pure-white">
       <div class="max-w-screen-lg mx-auto py-24 px-8 text-left">
 
         {{!-- Header over accordion --}}
@@ -98,7 +54,7 @@
             {{!-- Info sub-section --}}
             {{#each this.info}}
               <div class="grid auto-cols-max gap-x-12 gap-y-1 mt-8">
-                <span class="col-span-3 mt-4 mb-2 text-xl text-reddened-earth dark:text-kestrel-white">{{title}}</span>
+                <span class="col-span-3 mt-4 mb-2 font-bold text-reddened-earth dark:text-kestrel-white">{{title}}</span>
                 {{#each this.rows}}
                   <span>{{col-1}}
                     <span class="wrapper inline-block">
@@ -132,34 +88,170 @@
 
     <div class="bg-kestrel-white text-black-magic dark:bg-mount-etna dark:text-pure-white">
       <div class="max-w-screen-lg mx-auto py-24 px-8 text-left">
-        <p class="font-header text-4xl text-center mb-8">Methodology</p>
+        
+        <p class="font-header text-4xl text-center mb-16">Scoring</p>
 
-        <p class="text-3xl mt-12 mb-4">Trust<span class="text-base opacity-40 ml-2">scoring</span></p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure expedita nam blanditiis, aut perferendis ab harum animi ad dolorum amet, eaque eveniet praesentium, cumque labore aspernatur repudiandae accusamus? Corrupti, dolore?</p>
+        <p class="text-3xl mt-12 mb-4">Trust</p>
+        <p class="mb-2">The rating for each ramp starts at 100 points and may suffer the following deductions:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Deduction</th>
+              <th>Reasoning for deduction</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>5 points</td>
+              <td>
+                - Legaly based in a different jurisdiction<br>
+                - User funds are kept in custody for more than a couple hours.
+              </td>
+            </tr>
+            <tr>
+              <td>10 points</td>
+              <td>
+                - User funds are kept in custody for more than a day.
+              </td>
+            </tr>
+            <tr>
+              <td>20 points</td>
+              <td>
+                - User funds are kept in custody and no verifiable Proof of Reserve and Liabilities is available.<br>
+                - Privacy policy allows the ramp to share user data.
+              </td>
+            </tr>
+            <tr>
+              <td>40 points</td>
+              <td>
+                - Hack involving user funds in the last 5 years<br>
+                - History of withdraw of user funds suspended in the last 5 years
+              </td>
+            </tr>
+          </tbody>
+        </table>
 
-        <p class="text-3xl mt-12 mb-4">Easy of Use<span class="text-base opacity-40 ml-2">scoring</span></p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure expedita nam blanditiis, aut perferendis ab harum animi ad dolorum amet, eaque eveniet praesentium, cumque labore aspernatur repudiandae accusamus? Corrupti, dolore?</p>
+        <p class="text-3xl mt-12 mb-4">Easy of Use</p>
+        <p class="mb-2">The rating for each ramp starts at 100 points and may suffer the following deductions:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Deduction</th>
+              <th>Reasoning for deduction</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>5 points</td>
+              <td>
+                - More than two clicks (or touches) are needed to start the process.<br>
+                - The interface is confusing. <br>
+                - The appearance is outdated. <br>
+                - Takes more than 10 minutes for a card or digital wallet purchase. <br>
+                - Takes more than 3 business days for ACH or Wire transfer to clear.
+              </td>
+            </tr>
+            <tr>
+              <td>10 points</td>
+              <td>
+                - Crucial information is not clearly visible (like time, cost, and destination). <br>
+                - Takes more than 20 minutes for a card or digital wallet purchase. <br>
+                - Takes more than 5 business days for ACH or Wire transfer to clear.
+              </td>
+            </tr>
+            <tr>
+              <td>20 points</td>
+              <td>
+                - Takes more than 60 minutes for a card or digital wallet purchase. <br>
+                - Takes more than 7 business days for ACH or Wire transfer to clear.
+              </td>
+            </tr>
+          </tbody>
+        </table>
 
-        <p class="text-3xl mt-12 mb-4">Cost<span class="text-base opacity-40 ml-2">scoring</span></p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure expedita nam blanditiis, aut perferendis ab harum animi ad dolorum amet, eaque eveniet praesentium, cumque labore aspernatur repudiandae accusamus? Corrupti, dolore?</p>
+        <p class="text-3xl mt-12 mb-4">Cost</p>
+        <p class="mb-2">The rating for each ramp starts at 100 points and may suffer the following deductions:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Deduction</th>
+              <th>Reasoning for deduction</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>5 points</td>
+              <td>
+                - Wire deposits costs more than $15 <br>
+                - Service or trade fee costs more than 0.5%
+              </td>
+            </tr>
+            <tr>
+              <td>10 points</td>
+              <td>
+                - ACH transfers are not free <br>
+                - Credit or debit card fee costs more than 3% <br>
+                - Service or trade fee costs more than 1.0%
+              </td>
+            </tr>
+            <tr>
+              <td>15 points</td>
+              <td>
+                - Credit or debit card fee costs more than 4% <br>
+                - Service or trade fee costs more than 1.5%
+              </td>
+            </tr>
+            <tr>
+              <td>20 points</td>
+              <td>
+                - Credit or debit card fee costs more than 5% <br>
+                - Service or trade fee costs more than 2.0%
+              </td>
+            </tr>
+          </tbody>
+        </table>
 
-        <p class="text-3xl mt-12 mb-4">Ramps<span class="text-base opacity-40 ml-2">filtering and sorting</span></p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure expedita nam blanditiis, aut perferendis ab harum animi ad dolorum amet, eaque eveniet praesentium, cumque labore aspernatur repudiandae accusamus? Corrupti, dolore?</p>
+        <p class="font-header text-4xl text-center mt-24 mb-16">Filtering and Sorting</p>
 
-        <p class="text-3xl mt-12 mb-4">Layer 2s<span class="text-base opacity-40 ml-2">filtering and sorting</span></p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure expedita nam blanditiis, aut perferendis ab harum animi ad dolorum amet, eaque eveniet praesentium, cumque labore aspernatur repudiandae accusamus? Corrupti, dolore?</p>
+        <p class="text-3xl mt-12 mb-4">Ramps</p>
+        <p>The current list only includes ramps that follow the following criteria:</p>
+        <ul>
+          <li>- Terms of service should not exclude a U.S. Person.</li>
+          <li>-	Must offer withdraw (or deposits from) an Ethereum Layer 2.</li>
+          <li>-	Must be unique. Therefore, aggregators and alternative interfaces for a same service was omitted for simplicity.</li>
+        </ul> 
 
-        <p class="text-3xl mt-12 mb-4">Tokens<span class="text-base opacity-40 ml-2">filtering and sorting</span></p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure expedita nam blanditiis, aut perferendis ab harum animi ad dolorum amet, eaque eveniet praesentium, cumque labore aspernatur repudiandae accusamus? Corrupti, dolore?</p>
+        <p class="text-3xl mt-12 mb-4">Layer 2s</p>
+        <p>It was only considered chains:</p>
+        <ul>
+          <li>-	That fully or partially derives its security from L1 Ethereum so that users do not have to rely on the honesty of L2 validators for the security of their funds</li>
+          <li>-	With Total Value Locked greater than $1M.</li>
+        </ul>
 
-        <p class="text-3xl mt-12 mb-4">Payment Methods<span class="text-base opacity-40 ml-2">sorting</span></p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure expedita nam blanditiis, aut perferendis ab harum animi ad dolorum amet, eaque eveniet praesentium, cumque labore aspernatur repudiandae accusamus? Corrupti, dolore?</p>
+        <p class="text-3xl mt-12 mb-4">Tokens</p>
+        <p>They were sorted on the following order:</p>
+        <ul>
+          <li>1. ETH - Necessary for most activities since is used for network fees</li>
+          <li>2. STABLE TOKENS - It can be used in non-speculative actives and naturally good onboarding tokens. They are sorted based on decentralization (ex.: RAI / LUSD > DAI > USDC / USDT).</li>
+          <li>3. VOLATILE TOKENS - It is displayed for last due to their riskier nature. They are sorted alphabetically.</li>
+        </ul>
+
+
+        <p class="text-3xl mt-12 mb-4">Payment Methods</p>
+        <p>Only payment methods available for U.S. Person are displayed.</p>
+        <p>They were sorted based on cost followed by speed when cost is similar:</p>
+        <ul>
+          <li>1. ACH transfers</li>
+          <li>2. Third-party payments (ex.: Zelle, Venmo, CashApp, PayPal)</li>
+          <li>3. Digital wallets (ex.: Apple Pay and Google Pay)</li>
+          <li>4. Credit and debit cards</li>
+          <li>5. Wire transfers</li>
+        </ul>
 
       </div>
 
     </div>
 
-    <script src="./app.js"></script>
+  {{/content}}
 
-  </body>
-</html>
+{{/extend}}

@@ -1,6 +1,5 @@
 {
   "devDependencies": {
-    "@parcel/transformer-yaml": "^2.7.0",
     "@partiellkorrekt/parcel-transformer-handlebars": "^1.0.3",
     "parcel": "^2.7.0",
     "postcss": "^8.4.18",
@@ -18,7 +17,6 @@
     "browserslist": "^4.21.4",
     "buffer-from": "^1.1.2",
     "callsites": "^3.1.0",
-    "caniuse-lite": "^1.0.30001427",
     "chalk": "^4.1.2",
     "chrome-trace-event": "^1.0.3",
     "clone": "^2.1.2",
@@ -101,7 +99,9 @@
     "lightningcss-darwin-x64": "*"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev":  "npx parcel src/markup/index.hbs --no-cache",
+    "build":  "npx parcel build src/markup/index.hbs",
+    "deploy": "firebase deply --only hosting:l2ramps"
   },
   "repository": {
     "type": "git",

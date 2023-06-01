@@ -1,6 +1,6 @@
 # **L2 Ramps**
 An open source web page to list and compare on/off ramp providers that support Ethereum Layer 2s.
-The United States version is maintained by [otavio.eth](https://twitter.com/otavio_eth) and can be found at [l2ramps.web.app](https://l2ramps.web.app/)
+* The United States version is maintained by [otavio.eth](https://twitter.com/otavio_eth) and can be found at [l2ramps.web.app](https://l2ramps.web.app/)
 
 ### **Mission**
 This site aim to help users reduce costs, comprehend risks, and avoid unnecessary KYCs by going directly to the right service for their needs. 
@@ -14,11 +14,11 @@ The work on all these fronts are going to happen in parallel. This way I do not 
 ### **The Verge**
 _Feeding the website with reliable data_
 * ~~Create a static website with file based database~~ - Done
-* ~~Find the L2 ramps currently available for US persons~~ - Done
-* Improve card layout and include legend - 60% done - Dec/22
+* ~~Initial search for L2 ramps available for U.S. Person~~ - Done
+* Improve card layout and include legend - 80% done - Dec/22
 * ~~List ramps with icons~~ - Done
-* Check and list the terms of services of each ramp - 90% done - Dec/22
-* Check and list the privacy police of each ramp - 90% - Dec/22
+* ~~Check and list the terms of services of each ramp~~ Done
+* ~~Check and list the privacy police of each ramp~~ Done
 * Check and list funding methods of each ramp - Dec/22
 * Check and list purchase options of each ramp - Dec/22
 * Check and list withdraw options of each ramp - Dec/22
@@ -59,9 +59,9 @@ _Fixing the website_
 * Remove unnecessary dependencies - Q2/23
 
 # **Forking this repository**
-> This website was coded to be host like any static website. Everything is pre-processed offline, no database configuration is necessary.
+> This website was coded to be hosted like a static website. Everything is pre-processed offline, no database configuration or knowledge is necessary.
 
-> Make sure you have Git and NPM installed in the machine.
+> Make sure you have Git and NPM installed on your machine.
 
 1. Clone this repository using Git
 
@@ -73,12 +73,9 @@ _Fixing the website_
 
 3. Run parcel's live server and modify the files in the data folder
 
-    `npx parcel src/markup/index.hbs --no-cache`
+    `npm run dev`
 
-4. Compile the production files
+4. Compile the production files and host
 
-    `npx parcel build src/markup/index.hbs`
-
-5. Copy the files in the "dist" folder to your hosting.
-
-    `Done!`
+    `npm run build`
+    `npm run deply`

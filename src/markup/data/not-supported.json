@@ -6,9 +6,11 @@
         {"name":"Coinify"},
         {"name":"JunoPay","why":"Already included Transak"},
         {"name":"Huobi"},
+        {"name":"Mercuryo","why":"No L2 withdraw option was found"},
         {"name":"Mt Pelerin"},
         {"name":"OKX", "why":"Does not serve US Person"},
         {"name":"Onramper","why":"Agregator"},
+        {"name":"Sardine","why":"No L2 withdraw option was found"},
         {"name":"Shapeshift","why":"Agregator"},
         {"name":"UTORG","why":"Does not serve US Person"}
     ]
